@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AnaDash
 {
-    public partial class AnaDash : Form
+    public partial class HomePageForm : Form
     {
-        public AnaDash()
+        public HomePageForm()
         {
             InitializeComponent();
         }

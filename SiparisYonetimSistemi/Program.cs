@@ -17,7 +17,7 @@ namespace SiparisYonetimSistemi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AnaDash());
+            Application.Run(new HomePageForm());
         }
     }
 }

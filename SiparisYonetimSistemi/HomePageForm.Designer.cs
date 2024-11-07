@@ -1,6 +1,6 @@
 ﻿namespace AnaDash
 {
-    partial class AnaDash
+    partial class HomePageForm
     {
         /// <summary>
         /// Required designer variable.

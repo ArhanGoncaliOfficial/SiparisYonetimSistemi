@@ -47,11 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnaDash.cs">
+    <Compile Include="HomePageForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AnaDash.Designer.cs">
-      <DependentUpon>AnaDash.cs</DependentUpon>
+    <Compile Include="HomePageForm.Designer.cs">
+      <DependentUpon>HomePageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -67,8 +67,8 @@
     <Compile Include="Reports.Designer.cs">
       <DependentUpon>Reports.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AnaDash.resx">
-      <DependentUpon>AnaDash.cs</DependentUpon>
+    <EmbeddedResource Include="HomePageForm.resx">
+      <DependentUpon>HomePageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
