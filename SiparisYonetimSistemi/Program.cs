@@ -1,4 +1,5 @@
 ﻿using AnaDash;
+using deneme001;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace SiparisYonetimSistemi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AccountingDetails());
+            Application.Run(new Reports());
         }
     }
 }
