@@ -60,13 +60,13 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.sidebar.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -82,8 +82,8 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -325,6 +325,35 @@
             this.panel3.Size = new System.Drawing.Size(191, 155);
             this.panel3.TabIndex = 2;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(86, 107);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(25, 25);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "0";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(14, 76);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Gider:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(86, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(25, 25);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "0";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -343,44 +372,6 @@
             this.panel2.Size = new System.Drawing.Size(189, 155);
             this.panel2.TabIndex = 1;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.chart4);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(189, 155);
-            this.panel1.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(86, 42);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 25);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "0";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 76);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Gider:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(86, 107);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(25, 25);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "0";
-            // 
             // chart3
             // 
             chartArea3.Name = "ChartArea1";
@@ -396,6 +387,15 @@
             this.chart3.Size = new System.Drawing.Size(183, 149);
             this.chart3.TabIndex = 2;
             this.chart3.Text = "chart3";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.chart4);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(189, 155);
+            this.panel1.TabIndex = 0;
             // 
             // chart4
             // 
@@ -439,8 +439,8 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
