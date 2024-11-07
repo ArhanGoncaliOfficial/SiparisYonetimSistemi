@@ -340,9 +340,9 @@
             this.label15.Location = new System.Drawing.Point(38, 19);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(136, 24);
+            this.label15.Size = new System.Drawing.Size(119, 24);
             this.label15.TabIndex = 3;
-            this.label15.Text = "- Table Name -";
+            this.label15.Text = "Table Name ";
             // 
             // label14
             // 
