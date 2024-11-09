@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountingDetails));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -63,9 +63,10 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(693, 79);
+            this.textBox1.Location = new System.Drawing.Point(924, 97);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 20);
+            this.textBox1.Size = new System.Drawing.Size(209, 22);
             this.textBox1.TabIndex = 8;
             this.textBox1.Text = "Search";
             // 
@@ -73,9 +74,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(768, 459);
+            this.label2.Location = new System.Drawing.Point(1024, 565);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 20);
+            this.label2.Size = new System.Drawing.Size(105, 25);
             this.label2.TabIndex = 7;
             this.label2.Text = "Total Price";
             // 
@@ -83,20 +85,21 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(208, 79);
+            this.label1.Location = new System.Drawing.Point(277, 97);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 25);
+            this.label1.Size = new System.Drawing.Size(240, 31);
             this.label1.TabIndex = 6;
             this.label1.Text = "Accounting Details";
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -105,10 +108,11 @@
             this.Piece,
             this.Material,
             this.Price});
-            this.dataGridView1.Location = new System.Drawing.Point(207, 110);
+            this.dataGridView1.Location = new System.Drawing.Point(276, 135);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(644, 334);
+            this.dataGridView1.Size = new System.Drawing.Size(859, 411);
             this.dataGridView1.TabIndex = 5;
             // 
             // ID
@@ -164,40 +168,40 @@
             this.sidebar.Controls.Add(this.panel13);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
-            this.sidebar.Margin = new System.Windows.Forms.Padding(2);
-            this.sidebar.MaximumSize = new System.Drawing.Size(186, 510);
-            this.sidebar.MinimumSize = new System.Drawing.Size(30, 510);
+            this.sidebar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sidebar.MaximumSize = new System.Drawing.Size(248, 628);
+            this.sidebar.MinimumSize = new System.Drawing.Size(40, 628);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(186, 510);
-            this.sidebar.TabIndex = 11;
+            this.sidebar.Size = new System.Drawing.Size(248, 628);
+            this.sidebar.TabIndex = 9;
             // 
             // panel8
             // 
             this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
             this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel8.Location = new System.Drawing.Point(2, 2);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Location = new System.Drawing.Point(3, 2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(184, 78);
+            this.panel8.Size = new System.Drawing.Size(245, 162);
             this.panel8.TabIndex = 0;
             // 
             // panel9
             // 
             this.panel9.Controls.Add(this.button14);
-            this.panel9.Location = new System.Drawing.Point(2, 84);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2);
+            this.panel9.Location = new System.Drawing.Point(3, 168);
+            this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(184, 37);
+            this.panel9.Size = new System.Drawing.Size(245, 46);
             this.panel9.TabIndex = 0;
             // 
             // button14
             // 
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(-2, -5);
-            this.button14.Margin = new System.Windows.Forms.Padding(2);
+            this.button14.Location = new System.Drawing.Point(-3, -6);
+            this.button14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(191, 45);
+            this.button14.Size = new System.Drawing.Size(255, 55);
             this.button14.TabIndex = 4;
             this.button14.Text = "          Overview";
             this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -206,20 +210,20 @@
             // panel10
             // 
             this.panel10.Controls.Add(this.button15);
-            this.panel10.Location = new System.Drawing.Point(2, 125);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2);
+            this.panel10.Location = new System.Drawing.Point(3, 218);
+            this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(184, 37);
+            this.panel10.Size = new System.Drawing.Size(245, 46);
             this.panel10.TabIndex = 5;
             // 
             // button15
             // 
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(-2, -5);
-            this.button15.Margin = new System.Windows.Forms.Padding(2);
+            this.button15.Location = new System.Drawing.Point(-3, -6);
+            this.button15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(191, 45);
+            this.button15.Size = new System.Drawing.Size(255, 55);
             this.button15.TabIndex = 4;
             this.button15.Text = "          User Management      ";
             this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -228,20 +232,20 @@
             // panel11
             // 
             this.panel11.Controls.Add(this.button16);
-            this.panel11.Location = new System.Drawing.Point(2, 166);
-            this.panel11.Margin = new System.Windows.Forms.Padding(2);
+            this.panel11.Location = new System.Drawing.Point(3, 268);
+            this.panel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(184, 37);
+            this.panel11.Size = new System.Drawing.Size(245, 46);
             this.panel11.TabIndex = 5;
             // 
             // button16
             // 
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.ForeColor = System.Drawing.Color.White;
-            this.button16.Location = new System.Drawing.Point(-2, -5);
-            this.button16.Margin = new System.Windows.Forms.Padding(2);
+            this.button16.Location = new System.Drawing.Point(-3, -6);
+            this.button16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(191, 45);
+            this.button16.Size = new System.Drawing.Size(255, 55);
             this.button16.TabIndex = 4;
             this.button16.Text = "          Supplier Management";
             this.button16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -250,20 +254,20 @@
             // panel12
             // 
             this.panel12.Controls.Add(this.button17);
-            this.panel12.Location = new System.Drawing.Point(2, 207);
-            this.panel12.Margin = new System.Windows.Forms.Padding(2);
+            this.panel12.Location = new System.Drawing.Point(3, 318);
+            this.panel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(184, 37);
+            this.panel12.Size = new System.Drawing.Size(245, 46);
             this.panel12.TabIndex = 5;
             // 
             // button17
             // 
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button17.ForeColor = System.Drawing.Color.White;
-            this.button17.Location = new System.Drawing.Point(-2, -5);
-            this.button17.Margin = new System.Windows.Forms.Padding(2);
+            this.button17.Location = new System.Drawing.Point(-3, -6);
+            this.button17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(191, 45);
+            this.button17.Size = new System.Drawing.Size(255, 55);
             this.button17.TabIndex = 4;
             this.button17.Text = "          Accountancy";
             this.button17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -272,20 +276,20 @@
             // panel13
             // 
             this.panel13.Controls.Add(this.button18);
-            this.panel13.Location = new System.Drawing.Point(2, 248);
-            this.panel13.Margin = new System.Windows.Forms.Padding(2);
+            this.panel13.Location = new System.Drawing.Point(3, 368);
+            this.panel13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(184, 37);
+            this.panel13.Size = new System.Drawing.Size(245, 46);
             this.panel13.TabIndex = 6;
             // 
             // button18
             // 
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button18.ForeColor = System.Drawing.Color.White;
-            this.button18.Location = new System.Drawing.Point(-2, -5);
-            this.button18.Margin = new System.Windows.Forms.Padding(2);
+            this.button18.Location = new System.Drawing.Point(-3, -6);
+            this.button18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(191, 45);
+            this.button18.Size = new System.Drawing.Size(255, 55);
             this.button18.TabIndex = 4;
             this.button18.Text = "          Reports";
             this.button18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -293,15 +297,15 @@
             // 
             // AccountingDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(879, 510);
+            this.ClientSize = new System.Drawing.Size(1182, 628);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AccountingDetails";
             this.Text = "Form7";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
