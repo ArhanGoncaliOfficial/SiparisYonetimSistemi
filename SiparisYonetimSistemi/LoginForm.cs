@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnaDash;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -142,7 +143,10 @@ namespace SiparisYonetimSistemi
             if (ValidateUser(email, hashedPassword))
             {
                 MessageBox.Show("Login successful!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                // Redirect to another form or dashboard
+                
+                HomePageForm homePageForm = new HomePageForm(); // Redirect the user to Home Page
+                homePageForm.Show();
+                this.Hide(); // Hide the current form
             }
             else
             {
