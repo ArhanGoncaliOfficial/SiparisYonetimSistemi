@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserManagement));
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -45,15 +45,15 @@
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.button14 = new System.Windows.Forms.Button();
+            this.overview_btn = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.button15 = new System.Windows.Forms.Button();
+            this.user_m_btn = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.button16 = new System.Windows.Forms.Button();
+            this.menu_m_btn = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.button17 = new System.Windows.Forms.Button();
+            this.acc_btn = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.button18 = new System.Windows.Forms.Button();
+            this.reports_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.sidebar.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -95,12 +95,12 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -110,7 +110,7 @@
             this.Ingredients,
             this.Date});
             this.dataGridView1.Location = new System.Drawing.Point(284, 106);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(859, 411);
@@ -161,7 +161,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(933, 75);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(209, 22);
             this.textBox1.TabIndex = 13;
@@ -208,113 +208,118 @@
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.button14);
+            this.panel9.Controls.Add(this.overview_btn);
             this.panel9.Location = new System.Drawing.Point(3, 168);
             this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(245, 46);
             this.panel9.TabIndex = 0;
             // 
-            // button14
+            // overview_btn
             // 
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(-3, -6);
-            this.button14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(255, 55);
-            this.button14.TabIndex = 4;
-            this.button14.Text = "          Overview";
-            this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button14.UseVisualStyleBackColor = true;
+            this.overview_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.overview_btn.ForeColor = System.Drawing.Color.White;
+            this.overview_btn.Location = new System.Drawing.Point(-3, -6);
+            this.overview_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.overview_btn.Name = "overview_btn";
+            this.overview_btn.Size = new System.Drawing.Size(255, 55);
+            this.overview_btn.TabIndex = 4;
+            this.overview_btn.Text = "          Overview";
+            this.overview_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.overview_btn.UseVisualStyleBackColor = true;
+            this.overview_btn.Click += new System.EventHandler(this.overview_btn_Click);
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.button15);
+            this.panel10.Controls.Add(this.user_m_btn);
             this.panel10.Location = new System.Drawing.Point(3, 218);
             this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(245, 46);
             this.panel10.TabIndex = 5;
             // 
-            // button15
+            // user_m_btn
             // 
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(-3, -6);
-            this.button15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(255, 55);
-            this.button15.TabIndex = 4;
-            this.button15.Text = "          User Management      ";
-            this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button15.UseVisualStyleBackColor = true;
+            this.user_m_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.user_m_btn.ForeColor = System.Drawing.Color.White;
+            this.user_m_btn.Location = new System.Drawing.Point(-3, -6);
+            this.user_m_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.user_m_btn.Name = "user_m_btn";
+            this.user_m_btn.Size = new System.Drawing.Size(255, 55);
+            this.user_m_btn.TabIndex = 4;
+            this.user_m_btn.Text = "          User Management      ";
+            this.user_m_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.user_m_btn.UseVisualStyleBackColor = true;
+            this.user_m_btn.Click += new System.EventHandler(this.user_m_btn_Click);
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.button16);
+            this.panel11.Controls.Add(this.menu_m_btn);
             this.panel11.Location = new System.Drawing.Point(3, 268);
             this.panel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(245, 46);
             this.panel11.TabIndex = 5;
             // 
-            // button16
+            // menu_m_btn
             // 
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.ForeColor = System.Drawing.Color.White;
-            this.button16.Location = new System.Drawing.Point(-3, -6);
-            this.button16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(255, 55);
-            this.button16.TabIndex = 4;
-            this.button16.Text = "          Supplier Management";
-            this.button16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button16.UseVisualStyleBackColor = true;
+            this.menu_m_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menu_m_btn.ForeColor = System.Drawing.Color.White;
+            this.menu_m_btn.Location = new System.Drawing.Point(-3, -6);
+            this.menu_m_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.menu_m_btn.Name = "menu_m_btn";
+            this.menu_m_btn.Size = new System.Drawing.Size(255, 55);
+            this.menu_m_btn.TabIndex = 4;
+            this.menu_m_btn.Text = "          Menu Management";
+            this.menu_m_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menu_m_btn.UseVisualStyleBackColor = true;
+            this.menu_m_btn.Click += new System.EventHandler(this.menu_m_btn_Click);
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.button17);
+            this.panel12.Controls.Add(this.acc_btn);
             this.panel12.Location = new System.Drawing.Point(3, 318);
             this.panel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(245, 46);
             this.panel12.TabIndex = 5;
             // 
-            // button17
+            // acc_btn
             // 
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.ForeColor = System.Drawing.Color.White;
-            this.button17.Location = new System.Drawing.Point(-3, -6);
-            this.button17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(255, 55);
-            this.button17.TabIndex = 4;
-            this.button17.Text = "          Accountancy";
-            this.button17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button17.UseVisualStyleBackColor = true;
+            this.acc_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.acc_btn.ForeColor = System.Drawing.Color.White;
+            this.acc_btn.Location = new System.Drawing.Point(-3, -6);
+            this.acc_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.acc_btn.Name = "acc_btn";
+            this.acc_btn.Size = new System.Drawing.Size(255, 55);
+            this.acc_btn.TabIndex = 4;
+            this.acc_btn.Text = "          Accountancy";
+            this.acc_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.acc_btn.UseVisualStyleBackColor = true;
+            this.acc_btn.Click += new System.EventHandler(this.acc_btn_Click);
             // 
             // panel13
             // 
-            this.panel13.Controls.Add(this.button18);
+            this.panel13.Controls.Add(this.reports_btn);
             this.panel13.Location = new System.Drawing.Point(3, 368);
             this.panel13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(245, 46);
             this.panel13.TabIndex = 6;
             // 
-            // button18
+            // reports_btn
             // 
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.ForeColor = System.Drawing.Color.White;
-            this.button18.Location = new System.Drawing.Point(-3, -6);
-            this.button18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(255, 55);
-            this.button18.TabIndex = 4;
-            this.button18.Text = "          Reports";
-            this.button18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button18.UseVisualStyleBackColor = true;
+            this.reports_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reports_btn.ForeColor = System.Drawing.Color.White;
+            this.reports_btn.Location = new System.Drawing.Point(-3, -6);
+            this.reports_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.reports_btn.Name = "reports_btn";
+            this.reports_btn.Size = new System.Drawing.Size(255, 55);
+            this.reports_btn.TabIndex = 4;
+            this.reports_btn.Text = "          Reports";
+            this.reports_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.reports_btn.UseVisualStyleBackColor = true;
+            this.reports_btn.Click += new System.EventHandler(this.reports_btn_Click);
             // 
             // UserManagement
             // 
@@ -328,7 +333,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserManagement";
             this.Text = "UserManagement";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -359,14 +364,14 @@
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button overview_btn;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button user_m_btn;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button menu_m_btn;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button acc_btn;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button reports_btn;
     }
 }

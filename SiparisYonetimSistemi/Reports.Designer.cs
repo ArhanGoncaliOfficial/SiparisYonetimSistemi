@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea17 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend17 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend18 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea19 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend19 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea20 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend20 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reports));
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -60,15 +60,15 @@
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.button14 = new System.Windows.Forms.Button();
+            this.overview_btn = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.button15 = new System.Windows.Forms.Button();
+            this.user_m_btn = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.button16 = new System.Windows.Forms.Button();
+            this.menu_m_btn = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.button17 = new System.Windows.Forms.Button();
+            this.acc_btn = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.button18 = new System.Windows.Forms.Button();
+            this.reports_btn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
@@ -107,7 +107,7 @@
             this.tableLayoutPanel1.Controls.Add(this.panel5, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(267, 305);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -119,24 +119,24 @@
             this.panel5.Controls.Add(this.chart2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(387, 4);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(393, 216);
             this.panel5.TabIndex = 2;
             // 
             // chart2
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart2.Legends.Add(legend1);
+            chartArea17.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea17);
+            legend17.Name = "Legend1";
+            this.chart2.Legends.Add(legend17);
             this.chart2.Location = new System.Drawing.Point(0, 0);
-            this.chart2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chart2.Margin = new System.Windows.Forms.Padding(4);
             this.chart2.Name = "chart2";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart2.Series.Add(series1);
+            series17.ChartArea = "ChartArea1";
+            series17.Legend = "Legend1";
+            series17.Name = "Series1";
+            this.chart2.Series.Add(series17);
             this.chart2.Size = new System.Drawing.Size(392, 217);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
@@ -146,24 +146,24 @@
             this.panel4.Controls.Add(this.chart1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(4, 4);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(375, 216);
             this.panel4.TabIndex = 1;
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea18.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea18);
+            legend18.Name = "Legend1";
+            this.chart1.Legends.Add(legend18);
             this.chart1.Location = new System.Drawing.Point(0, 0);
-            this.chart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chart1.Margin = new System.Windows.Forms.Padding(4);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
+            series18.ChartArea = "ChartArea1";
+            series18.Legend = "Legend1";
+            series18.Name = "Series1";
+            this.chart1.Series.Add(series18);
             this.chart1.Size = new System.Drawing.Size(375, 217);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -178,7 +178,7 @@
             this.tableLayoutPanel2.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(267, 101);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -194,7 +194,7 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(526, 4);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(253, 190);
             this.panel3.TabIndex = 2;
@@ -246,24 +246,24 @@
             this.panel2.Controls.Add(this.chart3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(265, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(253, 190);
             this.panel2.TabIndex = 1;
             // 
             // chart3
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart3.Legends.Add(legend3);
+            chartArea19.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea19);
+            legend19.Name = "Legend1";
+            this.chart3.Legends.Add(legend19);
             this.chart3.Location = new System.Drawing.Point(4, 4);
-            this.chart3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chart3.Margin = new System.Windows.Forms.Padding(4);
             this.chart3.Name = "chart3";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart3.Series.Add(series3);
+            series19.ChartArea = "ChartArea1";
+            series19.Legend = "Legend1";
+            series19.Name = "Series1";
+            this.chart3.Series.Add(series19);
             this.chart3.Size = new System.Drawing.Size(244, 183);
             this.chart3.TabIndex = 2;
             this.chart3.Text = "chart3";
@@ -273,24 +273,24 @@
             this.panel1.Controls.Add(this.chart4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(253, 190);
             this.panel1.TabIndex = 0;
             // 
             // chart4
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart4.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart4.Legends.Add(legend4);
+            chartArea20.Name = "ChartArea1";
+            this.chart4.ChartAreas.Add(chartArea20);
+            legend20.Name = "Legend1";
+            this.chart4.Legends.Add(legend20);
             this.chart4.Location = new System.Drawing.Point(4, 4);
-            this.chart4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chart4.Margin = new System.Windows.Forms.Padding(4);
             this.chart4.Name = "chart4";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart4.Series.Add(series4);
+            series20.ChartArea = "ChartArea1";
+            series20.Legend = "Legend1";
+            series20.Name = "Series1";
+            this.chart4.Series.Add(series20);
             this.chart4.Size = new System.Drawing.Size(244, 183);
             this.chart4.TabIndex = 2;
             this.chart4.Text = "chart4";
@@ -325,113 +325,118 @@
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.button14);
+            this.panel9.Controls.Add(this.overview_btn);
             this.panel9.Location = new System.Drawing.Point(3, 168);
             this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(245, 46);
             this.panel9.TabIndex = 0;
             // 
-            // button14
+            // overview_btn
             // 
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(-3, -6);
-            this.button14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(255, 55);
-            this.button14.TabIndex = 4;
-            this.button14.Text = "          Overview";
-            this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button14.UseVisualStyleBackColor = true;
+            this.overview_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.overview_btn.ForeColor = System.Drawing.Color.White;
+            this.overview_btn.Location = new System.Drawing.Point(-3, -6);
+            this.overview_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.overview_btn.Name = "overview_btn";
+            this.overview_btn.Size = new System.Drawing.Size(255, 55);
+            this.overview_btn.TabIndex = 4;
+            this.overview_btn.Text = "          Overview";
+            this.overview_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.overview_btn.UseVisualStyleBackColor = true;
+            this.overview_btn.Click += new System.EventHandler(this.overview_btn_Click);
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.button15);
+            this.panel10.Controls.Add(this.user_m_btn);
             this.panel10.Location = new System.Drawing.Point(3, 218);
             this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(245, 46);
             this.panel10.TabIndex = 5;
             // 
-            // button15
+            // user_m_btn
             // 
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(-3, -6);
-            this.button15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(255, 55);
-            this.button15.TabIndex = 4;
-            this.button15.Text = "          User Management      ";
-            this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button15.UseVisualStyleBackColor = true;
+            this.user_m_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.user_m_btn.ForeColor = System.Drawing.Color.White;
+            this.user_m_btn.Location = new System.Drawing.Point(-3, -6);
+            this.user_m_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.user_m_btn.Name = "user_m_btn";
+            this.user_m_btn.Size = new System.Drawing.Size(255, 55);
+            this.user_m_btn.TabIndex = 4;
+            this.user_m_btn.Text = "          User Management      ";
+            this.user_m_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.user_m_btn.UseVisualStyleBackColor = true;
+            this.user_m_btn.Click += new System.EventHandler(this.user_m_btn_Click);
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.button16);
+            this.panel11.Controls.Add(this.menu_m_btn);
             this.panel11.Location = new System.Drawing.Point(3, 268);
             this.panel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(245, 46);
             this.panel11.TabIndex = 5;
             // 
-            // button16
+            // menu_m_btn
             // 
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.ForeColor = System.Drawing.Color.White;
-            this.button16.Location = new System.Drawing.Point(-3, -6);
-            this.button16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(255, 55);
-            this.button16.TabIndex = 4;
-            this.button16.Text = "          Supplier Management";
-            this.button16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button16.UseVisualStyleBackColor = true;
+            this.menu_m_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menu_m_btn.ForeColor = System.Drawing.Color.White;
+            this.menu_m_btn.Location = new System.Drawing.Point(-3, -6);
+            this.menu_m_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.menu_m_btn.Name = "menu_m_btn";
+            this.menu_m_btn.Size = new System.Drawing.Size(255, 55);
+            this.menu_m_btn.TabIndex = 4;
+            this.menu_m_btn.Text = "          Menu Management";
+            this.menu_m_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menu_m_btn.UseVisualStyleBackColor = true;
+            this.menu_m_btn.Click += new System.EventHandler(this.menu_m_btn_Click);
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.button17);
+            this.panel12.Controls.Add(this.acc_btn);
             this.panel12.Location = new System.Drawing.Point(3, 318);
             this.panel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(245, 46);
             this.panel12.TabIndex = 5;
             // 
-            // button17
+            // acc_btn
             // 
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.ForeColor = System.Drawing.Color.White;
-            this.button17.Location = new System.Drawing.Point(-3, -6);
-            this.button17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(255, 55);
-            this.button17.TabIndex = 4;
-            this.button17.Text = "          Accountancy";
-            this.button17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button17.UseVisualStyleBackColor = true;
+            this.acc_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.acc_btn.ForeColor = System.Drawing.Color.White;
+            this.acc_btn.Location = new System.Drawing.Point(-3, -6);
+            this.acc_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.acc_btn.Name = "acc_btn";
+            this.acc_btn.Size = new System.Drawing.Size(255, 55);
+            this.acc_btn.TabIndex = 4;
+            this.acc_btn.Text = "          Accountancy";
+            this.acc_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.acc_btn.UseVisualStyleBackColor = true;
+            this.acc_btn.Click += new System.EventHandler(this.acc_btn_Click);
             // 
             // panel13
             // 
-            this.panel13.Controls.Add(this.button18);
+            this.panel13.Controls.Add(this.reports_btn);
             this.panel13.Location = new System.Drawing.Point(3, 368);
             this.panel13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(245, 46);
             this.panel13.TabIndex = 6;
             // 
-            // button18
+            // reports_btn
             // 
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.ForeColor = System.Drawing.Color.White;
-            this.button18.Location = new System.Drawing.Point(-3, -6);
-            this.button18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(255, 55);
-            this.button18.TabIndex = 4;
-            this.button18.Text = "          Reports";
-            this.button18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button18.UseVisualStyleBackColor = true;
+            this.reports_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reports_btn.ForeColor = System.Drawing.Color.White;
+            this.reports_btn.Location = new System.Drawing.Point(-3, -6);
+            this.reports_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.reports_btn.Name = "reports_btn";
+            this.reports_btn.Size = new System.Drawing.Size(255, 55);
+            this.reports_btn.TabIndex = 4;
+            this.reports_btn.Text = "          Reports";
+            this.reports_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.reports_btn.UseVisualStyleBackColor = true;
+            this.reports_btn.Click += new System.EventHandler(this.reports_btn_Click);
             // 
             // Reports
             // 
@@ -442,7 +447,7 @@
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Reports";
             this.Text = "Reports";
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -488,14 +493,14 @@
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button overview_btn;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button user_m_btn;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button menu_m_btn;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button acc_btn;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button reports_btn;
     }
 }
