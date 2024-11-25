@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -47,42 +47,42 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1020, 533);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Location = new System.Drawing.Point(759, 449);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 23);
+            this.button3.Size = new System.Drawing.Size(92, 19);
             this.button3.TabIndex = 14;
             this.button3.Text = "Edit";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(891, 533);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(662, 449);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 23);
+            this.button2.Size = new System.Drawing.Size(92, 19);
             this.button2.TabIndex = 15;
             this.button2.Text = "Remove";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(763, 533);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(566, 449);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 23);
+            this.button1.Size = new System.Drawing.Size(92, 19);
             this.button1.TabIndex = 16;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -91,11 +91,10 @@
             this.Price,
             this.Ingredients,
             this.Date});
-            this.dataGridView1.Location = new System.Drawing.Point(284, 106);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(207, 110);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(859, 411);
+            this.dataGridView1.Size = new System.Drawing.Size(644, 334);
             this.dataGridView1.TabIndex = 11;
             // 
             // ID
@@ -142,10 +141,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(933, 75);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Location = new System.Drawing.Point(693, 84);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(209, 22);
+            this.textBox1.Size = new System.Drawing.Size(158, 20);
             this.textBox1.TabIndex = 13;
             this.textBox1.Text = "Search";
             // 
@@ -153,10 +151,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(277, 68);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(202, 78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(236, 31);
+            this.label1.Size = new System.Drawing.Size(188, 25);
             this.label1.TabIndex = 12;
             this.label1.Text = "User Management";
             // 
@@ -164,16 +161,17 @@
             // 
             this.sidebar1.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar1.Location = new System.Drawing.Point(0, 0);
+            this.sidebar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.sidebar1.Name = "sidebar1";
             this.sidebar1.ParentFormRef = null;
-            this.sidebar1.Size = new System.Drawing.Size(248, 628);
+            this.sidebar1.Size = new System.Drawing.Size(186, 510);
             this.sidebar1.TabIndex = 17;
             // 
             // UserManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 628);
+            this.ClientSize = new System.Drawing.Size(886, 510);
             this.Controls.Add(this.sidebar1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -181,7 +179,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserManagement";
             this.Text = "UserManagement";
             this.Load += new System.EventHandler(this.UserManagement_Load);
