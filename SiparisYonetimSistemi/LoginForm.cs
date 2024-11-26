@@ -94,7 +94,7 @@ namespace SiparisYonetimSistemi
                     connection.Open();
 
                     // Check if admin user already exists
-                    string checkAdminQuery = "SELECT COUNT(1) FROM Users WHERE username = @username";
+                    string checkAdminQuery = "SELECT COUNT(1) FROM Users WHERE Username = @username";
                     using (SqlCommand checkCommand = new SqlCommand(checkAdminQuery, connection))
                     {
                         checkCommand.Parameters.Add(new SqlParameter("@username", SqlDbType.NVarChar) { Value = defaultUsername });
@@ -103,7 +103,7 @@ namespace SiparisYonetimSistemi
                         // If no admin user exists, create one
                         if (userCount == 0)
                         {
-                            string insertAdminQuery = @"INSERT INTO Users (username, email, password_hash, first_name, last_name, phone_number, is_admin, last_login)
+                            string insertAdminQuery = @"INSERT INTO Users (Username, Email, PasswordHash, FirstName, LastName, PhoneNumber, Role, LastLoginDate)
                                                          VALUES (@username, @adminEmail, @hashedPassword, 'Admin', 'User', '000-000-0000', 1, GETDATE())";
                             using (SqlCommand insertCommand = new SqlCommand(insertAdminQuery, connection))
                             {
@@ -159,8 +159,8 @@ namespace SiparisYonetimSistemi
         {
             bool isValidUser = false;
             string query = @"SELECT COUNT(1) FROM Users 
-                             WHERE email = @Email 
-                             AND password_hash = @hashedPassword";
+                             WHERE Email = @Email 
+                             AND PasswordHash = @hashedPassword";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

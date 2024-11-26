@@ -32,15 +32,15 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.overview = new System.Windows.Forms.Button();
+            this.overview_btn = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.user_m = new System.Windows.Forms.Button();
+            this.user_m_btn = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.menu_m = new System.Windows.Forms.Button();
+            this.menu_m_btn = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.acc = new System.Windows.Forms.Button();
+            this.acc_btn = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.reports = new System.Windows.Forms.Button();
+            this.reports_btn = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -79,118 +79,118 @@
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.overview);
+            this.panel9.Controls.Add(this.overview_btn);
             this.panel9.Location = new System.Drawing.Point(3, 168);
             this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(245, 46);
             this.panel9.TabIndex = 0;
             // 
-            // overview
+            // overview_btn
             // 
-            this.overview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.overview.ForeColor = System.Drawing.Color.White;
-            this.overview.Location = new System.Drawing.Point(-3, -6);
-            this.overview.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.overview.Name = "overview";
-            this.overview.Size = new System.Drawing.Size(255, 55);
-            this.overview.TabIndex = 4;
-            this.overview.Text = "          Overview";
-            this.overview.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.overview.UseVisualStyleBackColor = true;
-            this.overview.Click += new System.EventHandler(this.overview_Click);
+            this.overview_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.overview_btn.ForeColor = System.Drawing.Color.White;
+            this.overview_btn.Location = new System.Drawing.Point(-3, -6);
+            this.overview_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.overview_btn.Name = "overview_btn";
+            this.overview_btn.Size = new System.Drawing.Size(255, 55);
+            this.overview_btn.TabIndex = 4;
+            this.overview_btn.Text = "          Overview";
+            this.overview_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.overview_btn.UseVisualStyleBackColor = true;
+            this.overview_btn.Click += new System.EventHandler(this.overview_btn_Click);
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.user_m);
+            this.panel10.Controls.Add(this.user_m_btn);
             this.panel10.Location = new System.Drawing.Point(3, 218);
             this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(245, 46);
             this.panel10.TabIndex = 5;
             // 
-            // user_m
+            // user_m_btn
             // 
-            this.user_m.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.user_m.ForeColor = System.Drawing.Color.White;
-            this.user_m.Location = new System.Drawing.Point(-3, -6);
-            this.user_m.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.user_m.Name = "user_m";
-            this.user_m.Size = new System.Drawing.Size(255, 55);
-            this.user_m.TabIndex = 4;
-            this.user_m.Text = "          User Management      ";
-            this.user_m.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.user_m.UseVisualStyleBackColor = true;
-            this.user_m.Click += new System.EventHandler(this.user_m_Click);
+            this.user_m_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.user_m_btn.ForeColor = System.Drawing.Color.White;
+            this.user_m_btn.Location = new System.Drawing.Point(-3, -6);
+            this.user_m_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.user_m_btn.Name = "user_m_btn";
+            this.user_m_btn.Size = new System.Drawing.Size(255, 55);
+            this.user_m_btn.TabIndex = 4;
+            this.user_m_btn.Text = "          User Management      ";
+            this.user_m_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.user_m_btn.UseVisualStyleBackColor = true;
+            this.user_m_btn.Click += new System.EventHandler(this.user_m_btn_Click);
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.menu_m);
+            this.panel11.Controls.Add(this.menu_m_btn);
             this.panel11.Location = new System.Drawing.Point(3, 268);
             this.panel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(245, 46);
             this.panel11.TabIndex = 5;
             // 
-            // menu_m
+            // menu_m_btn
             // 
-            this.menu_m.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.menu_m.ForeColor = System.Drawing.Color.White;
-            this.menu_m.Location = new System.Drawing.Point(-3, -6);
-            this.menu_m.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.menu_m.Name = "menu_m";
-            this.menu_m.Size = new System.Drawing.Size(255, 55);
-            this.menu_m.TabIndex = 4;
-            this.menu_m.Text = "          Menu Management";
-            this.menu_m.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menu_m.UseVisualStyleBackColor = true;
-            this.menu_m.Click += new System.EventHandler(this.menu_m_Click);
+            this.menu_m_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menu_m_btn.ForeColor = System.Drawing.Color.White;
+            this.menu_m_btn.Location = new System.Drawing.Point(-3, -6);
+            this.menu_m_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.menu_m_btn.Name = "menu_m_btn";
+            this.menu_m_btn.Size = new System.Drawing.Size(255, 55);
+            this.menu_m_btn.TabIndex = 4;
+            this.menu_m_btn.Text = "          Menu Management";
+            this.menu_m_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menu_m_btn.UseVisualStyleBackColor = true;
+            this.menu_m_btn.Click += new System.EventHandler(this.menu_m_btn_Click);
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.acc);
+            this.panel12.Controls.Add(this.acc_btn);
             this.panel12.Location = new System.Drawing.Point(3, 318);
             this.panel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(245, 46);
             this.panel12.TabIndex = 5;
             // 
-            // acc
+            // acc_btn
             // 
-            this.acc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.acc.ForeColor = System.Drawing.Color.White;
-            this.acc.Location = new System.Drawing.Point(-3, -6);
-            this.acc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.acc.Name = "acc";
-            this.acc.Size = new System.Drawing.Size(255, 55);
-            this.acc.TabIndex = 4;
-            this.acc.Text = "          Accountancy";
-            this.acc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.acc.UseVisualStyleBackColor = true;
-            this.acc.Click += new System.EventHandler(this.acc_Click);
+            this.acc_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.acc_btn.ForeColor = System.Drawing.Color.White;
+            this.acc_btn.Location = new System.Drawing.Point(-3, -6);
+            this.acc_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.acc_btn.Name = "acc_btn";
+            this.acc_btn.Size = new System.Drawing.Size(255, 55);
+            this.acc_btn.TabIndex = 4;
+            this.acc_btn.Text = "          Accountancy";
+            this.acc_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.acc_btn.UseVisualStyleBackColor = true;
+            this.acc_btn.Click += new System.EventHandler(this.acc_btn_Click);
             // 
             // panel13
             // 
-            this.panel13.Controls.Add(this.reports);
+            this.panel13.Controls.Add(this.reports_btn);
             this.panel13.Location = new System.Drawing.Point(3, 368);
             this.panel13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(245, 46);
             this.panel13.TabIndex = 6;
             // 
-            // reports
+            // reports_btn
             // 
-            this.reports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reports.ForeColor = System.Drawing.Color.White;
-            this.reports.Location = new System.Drawing.Point(-3, -6);
-            this.reports.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.reports.Name = "reports";
-            this.reports.Size = new System.Drawing.Size(255, 55);
-            this.reports.TabIndex = 4;
-            this.reports.Text = "          Reports";
-            this.reports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.reports.UseVisualStyleBackColor = true;
-            this.reports.Click += new System.EventHandler(this.reports_Click);
+            this.reports_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reports_btn.ForeColor = System.Drawing.Color.White;
+            this.reports_btn.Location = new System.Drawing.Point(-3, -6);
+            this.reports_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.reports_btn.Name = "reports_btn";
+            this.reports_btn.Size = new System.Drawing.Size(255, 55);
+            this.reports_btn.TabIndex = 4;
+            this.reports_btn.Text = "          Reports";
+            this.reports_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.reports_btn.UseVisualStyleBackColor = true;
+            this.reports_btn.Click += new System.EventHandler(this.reports_btn_Click);
             // 
             // sidebar
             // 
@@ -214,14 +214,14 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button overview;
+        private System.Windows.Forms.Button overview_btn;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button user_m;
+        private System.Windows.Forms.Button user_m_btn;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Button menu_m;
+        private System.Windows.Forms.Button menu_m_btn;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Button acc;
+        private System.Windows.Forms.Button acc_btn;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Button reports;
+        private System.Windows.Forms.Button reports_btn;
     }
 }

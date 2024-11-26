@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePageForm));
             this.aval_panel = new System.Windows.Forms.Panel();
             this.aval_count = new System.Windows.Forms.Label();
             this.aval_label = new System.Windows.Forms.Label();
@@ -68,18 +67,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.reports_btn = new System.Windows.Forms.Button();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.acc_btn = new System.Windows.Forms.Button();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.menu_m_btn = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.user_m_btn = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.overview_btn = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
+            this.sidebar1 = new SiparisYonetimSistemi.sidebar();
             this.aval_panel.SuspendLayout();
             this.tkn_panel.SuspendLayout();
             this.ordered_panel.SuspendLayout();
@@ -90,12 +78,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel13.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.sidebar.SuspendLayout();
             this.SuspendLayout();
             // 
             // aval_panel
@@ -503,155 +485,21 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel13
+            // sidebar1
             // 
-            this.panel13.Controls.Add(this.reports_btn);
-            this.panel13.Location = new System.Drawing.Point(3, 368);
-            this.panel13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(245, 46);
-            this.panel13.TabIndex = 6;
-            // 
-            // reports_btn
-            // 
-            this.reports_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reports_btn.ForeColor = System.Drawing.Color.White;
-            this.reports_btn.Location = new System.Drawing.Point(-3, -6);
-            this.reports_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.reports_btn.Name = "reports_btn";
-            this.reports_btn.Size = new System.Drawing.Size(255, 55);
-            this.reports_btn.TabIndex = 4;
-            this.reports_btn.Text = "          Reports";
-            this.reports_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.reports_btn.UseVisualStyleBackColor = true;
-            this.reports_btn.Click += new System.EventHandler(this.reports_btn_Click);
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.acc_btn);
-            this.panel12.Location = new System.Drawing.Point(3, 318);
-            this.panel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(245, 46);
-            this.panel12.TabIndex = 5;
-            // 
-            // acc_btn
-            // 
-            this.acc_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.acc_btn.ForeColor = System.Drawing.Color.White;
-            this.acc_btn.Location = new System.Drawing.Point(-3, -6);
-            this.acc_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.acc_btn.Name = "acc_btn";
-            this.acc_btn.Size = new System.Drawing.Size(255, 55);
-            this.acc_btn.TabIndex = 4;
-            this.acc_btn.Text = "          Accountancy";
-            this.acc_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.acc_btn.UseVisualStyleBackColor = true;
-            this.acc_btn.Click += new System.EventHandler(this.acc_btn_Click);
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.menu_m_btn);
-            this.panel11.Location = new System.Drawing.Point(3, 268);
-            this.panel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(245, 46);
-            this.panel11.TabIndex = 5;
-            // 
-            // menu_m_btn
-            // 
-            this.menu_m_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.menu_m_btn.ForeColor = System.Drawing.Color.White;
-            this.menu_m_btn.Location = new System.Drawing.Point(-3, -6);
-            this.menu_m_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.menu_m_btn.Name = "menu_m_btn";
-            this.menu_m_btn.Size = new System.Drawing.Size(255, 55);
-            this.menu_m_btn.TabIndex = 4;
-            this.menu_m_btn.Text = "          Menu Management";
-            this.menu_m_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menu_m_btn.UseVisualStyleBackColor = true;
-            this.menu_m_btn.Click += new System.EventHandler(this.menu_m_btn_Click);
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.user_m_btn);
-            this.panel10.Location = new System.Drawing.Point(3, 218);
-            this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(245, 46);
-            this.panel10.TabIndex = 5;
-            // 
-            // user_m_btn
-            // 
-            this.user_m_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.user_m_btn.ForeColor = System.Drawing.Color.White;
-            this.user_m_btn.Location = new System.Drawing.Point(-3, -6);
-            this.user_m_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.user_m_btn.Name = "user_m_btn";
-            this.user_m_btn.Size = new System.Drawing.Size(255, 55);
-            this.user_m_btn.TabIndex = 4;
-            this.user_m_btn.Text = "          User Management      ";
-            this.user_m_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.user_m_btn.UseVisualStyleBackColor = true;
-            this.user_m_btn.Click += new System.EventHandler(this.user_m_btn_Click);
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.overview_btn);
-            this.panel9.Location = new System.Drawing.Point(3, 168);
-            this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(245, 46);
-            this.panel9.TabIndex = 0;
-            // 
-            // overview_btn
-            // 
-            this.overview_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.overview_btn.ForeColor = System.Drawing.Color.White;
-            this.overview_btn.Location = new System.Drawing.Point(-3, -6);
-            this.overview_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.overview_btn.Name = "overview_btn";
-            this.overview_btn.Size = new System.Drawing.Size(255, 55);
-            this.overview_btn.TabIndex = 4;
-            this.overview_btn.Text = "          Overview";
-            this.overview_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.overview_btn.UseVisualStyleBackColor = true;
-            this.overview_btn.Click += new System.EventHandler(this.overview_btn_Click);
-            // 
-            // panel8
-            // 
-            this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
-            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel8.Location = new System.Drawing.Point(3, 2);
-            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(245, 162);
-            this.panel8.TabIndex = 0;
-            // 
-            // sidebar
-            // 
-            this.sidebar.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.sidebar.Controls.Add(this.panel8);
-            this.sidebar.Controls.Add(this.panel9);
-            this.sidebar.Controls.Add(this.panel10);
-            this.sidebar.Controls.Add(this.panel11);
-            this.sidebar.Controls.Add(this.panel12);
-            this.sidebar.Controls.Add(this.panel13);
-            this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sidebar.Location = new System.Drawing.Point(0, 0);
-            this.sidebar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.sidebar.MaximumSize = new System.Drawing.Size(248, 628);
-            this.sidebar.MinimumSize = new System.Drawing.Size(40, 628);
-            this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(248, 628);
-            this.sidebar.TabIndex = 3;
+            this.sidebar1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sidebar1.Location = new System.Drawing.Point(0, 0);
+            this.sidebar1.Name = "sidebar1";
+            this.sidebar1.ParentFormRef = null;
+            this.sidebar1.Size = new System.Drawing.Size(248, 628);
+            this.sidebar1.TabIndex = 3;
             // 
             // HomePageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1182, 628);
-            this.Controls.Add(this.sidebar);
+            this.Controls.Add(this.sidebar1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.table12);
             this.Controls.Add(this.table11);
@@ -671,6 +519,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "HomePageForm";
             this.Text = "HomePageForm";
+            this.Load += new System.EventHandler(this.HomePageForm_Load);
             this.aval_panel.ResumeLayout(false);
             this.aval_panel.PerformLayout();
             this.tkn_panel.ResumeLayout(false);
@@ -688,12 +537,6 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel13.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.sidebar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -739,18 +582,7 @@
         private System.Windows.Forms.Label total;
         private System.Windows.Forms.Label price;
         private System.Windows.Forms.Label ordered_label;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Button reports_btn;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Button acc_btn;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Button menu_m_btn;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button user_m_btn;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button overview_btn;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.FlowLayoutPanel sidebar;
+        private SiparisYonetimSistemi.sidebar sidebar1;
     }
 }
 
