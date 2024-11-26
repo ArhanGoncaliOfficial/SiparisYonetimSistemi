@@ -24,6 +24,7 @@ namespace SiparisYonetimSistemi
             HomePageForm homePageForm = new HomePageForm();
             homePageForm.StartPosition = FormStartPosition.CenterScreen;
             this.Hide();
+
             homePageForm.Show();
 
         }
@@ -49,6 +50,7 @@ namespace SiparisYonetimSistemi
             AccountingDetails accountingDetailsForm = new AccountingDetails();
             accountingDetailsForm.StartPosition = FormStartPosition.CenterScreen;
             this.Hide();
+
             accountingDetailsForm.Show();
         }
 
