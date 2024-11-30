@@ -68,6 +68,18 @@
     <Compile Include="AccountingDetails.Designer.cs">
       <DependentUpon>AccountingDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddUsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUsersForm.Designer.cs">
+      <DependentUpon>AddUsersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditUserForm.Designer.cs">
+      <DependentUpon>EditUserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomePageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +117,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SiparisYonetimDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SupplierAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierAdd.Designer.cs">
+      <DependentUpon>SupplierAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierManagament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierManagament.Designer.cs">
+      <DependentUpon>SupplierManagament.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +137,12 @@
     </Compile>
     <EmbeddedResource Include="AccountingDetails.resx">
       <DependentUpon>AccountingDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUsersForm.resx">
+      <DependentUpon>AddUsersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditUserForm.resx">
+      <DependentUpon>EditUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePageForm.resx">
       <DependentUpon>HomePageForm.cs</DependentUpon>
@@ -138,6 +168,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sidebar.resx">
       <DependentUpon>sidebar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierAdd.resx">
+      <DependentUpon>SupplierAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierManagament.resx">
+      <DependentUpon>SupplierManagament.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserManagement.resx">
       <DependentUpon>UserManagement.cs</DependentUpon>
