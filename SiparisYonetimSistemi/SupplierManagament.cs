@@ -20,43 +20,105 @@ namespace SiparisYonetimSistemi
 
         private void LoadSuppliers()
         {
-            // Veritabanı bağlantı dizesi
-            string connectionString = "Server=localhost;Database=RestaurantManagement;Trusted_Connection=True;";
-            string query = "SELECT p.SupplierName, m.Name AS MaterialName, m.Unit, p.UnitPrice " +
-                           "FROM Purchases p " +
-                           "JOIN Materials m ON p.MaterialID = m.MaterialID;";
+            string query = @"
+        select 
+            s.SupplierID,
+            s.SupplierName,
+            s.ContactPhone,
+            m.Name as MaterialName,
+            m.Unit,
+            m.UnitPrice
+        from 
+            Suppliers s
+        left join 
+            Purchases p on s.SupplierID = p.SupplierID
+        left join 
+            Materials m on p.MaterialID = m.MaterialID";
 
-            // DataTable oluşturuyoruz
-            DataTable supplierTable = new DataTable();
-
-            try
+            DataTable dt = new DataTable();
+            using (SqlConnection conn = new SqlConnection("Server=localhost; Database=SiparisYonetimDB; Integrated Security=True;"))
             {
-                // Veritabanı bağlantısını aç
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-                    // SQL sorgusunu çalıştır
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
-                    {
-                        // Verileri DataTable'a doldur
-                        adapter.Fill(supplierTable);
-                    }
-                }
-
-                // DataGridView'e verileri yükle
-                dataGridView1.DataSource = supplierTable;
+                SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                da.Fill(dt);
             }
-            catch (Exception ex)
+            if (dt.Rows.Count > 0)
             {
-                MessageBox.Show("Veriler yüklenirken bir hata oluştu: " + ex.Message);
+                dataGridView1.DataSource = dt;
+                dataGridView1.AutoGenerateColumns = true;
+            }
+            else
+            {
+                MessageBox.Show("No data found!");
+            }
+
+            // Edit ve Remove butonlarını ekle
+            if (!dataGridView1.Columns.Contains("Edit"))
+            {
+                DataGridViewButtonColumn editButton = new DataGridViewButtonColumn();
+                editButton.Name = "Edit";
+                editButton.Text = "Edit";
+                editButton.UseColumnTextForButtonValue = true;
+                dataGridView1.Columns.Add(editButton);
+            }
+
+            if (!dataGridView1.Columns.Contains("Remove"))
+            {
+                DataGridViewButtonColumn removeButton = new DataGridViewButtonColumn();
+                removeButton.Name = "Remove";
+                removeButton.Text = "Remove";
+                removeButton.UseColumnTextForButtonValue = true;
+                dataGridView1.Columns.Add(removeButton);
             }
         }
+
 
         private void SupplierManagament_Load(object sender, EventArgs e)
         {
             LoadSuppliers();
-
         }
-    }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            SupplierAdd addSupplierForm = new SupplierAdd();
+            addSupplierForm.ShowDialog();
+
+            if (addSupplierForm.DialogResult == DialogResult.OK)
+            {
+                LoadSuppliers();
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Edit")
+        {
+            int supplierId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["SupplierID"].Value);
+            EditSupplierForm editForm = new EditSupplierForm(supplierId);
+            editForm.ShowDialog();
+
+            if (editForm.DialogResult == DialogResult.OK)
+            {
+                LoadSuppliers();
+            }
+        }
+        else if (dataGridView1.Columns[e.ColumnIndex].Name == "Remove")
+        {
+            int supplierId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["SupplierID"].Value);
+            DialogResult confirm = MessageBox.Show("Are you sure to delete this supplier?", "Confirm", MessageBoxButtons.YesNo);
+
+            if (confirm == DialogResult.Yes)
+            {
+                using (SqlConnection conn = new SqlConnection("Server=localhost; Database=SiparisYonetimDB; Integrated Security=True;"))
+                {
+                    string query = "delete from Suppliers where SupplierID = @SupplierID";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@SupplierID", supplierId);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+                LoadSuppliers();
+            }
+        }
+            }
+        }
 }

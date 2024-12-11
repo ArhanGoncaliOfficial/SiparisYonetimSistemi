@@ -130,7 +130,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(566, 449);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 19);
             this.button1.TabIndex = 9;
@@ -140,7 +140,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(662, 449);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(92, 19);
             this.button2.TabIndex = 9;
@@ -150,7 +150,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(759, 449);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(92, 19);
             this.button3.TabIndex = 9;
@@ -161,7 +161,7 @@
             // 
             this.sidebar1.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar1.Location = new System.Drawing.Point(0, 0);
-            this.sidebar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sidebar1.Margin = new System.Windows.Forms.Padding(2);
             this.sidebar1.Name = "sidebar1";
             this.sidebar1.ParentFormRef = null;
             this.sidebar1.Size = new System.Drawing.Size(186, 510);
@@ -179,7 +179,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MenuManagament";
             this.Text = "Menu Management";
             this.Load += new System.EventHandler(this.Form4_Load);
