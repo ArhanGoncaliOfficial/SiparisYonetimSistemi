@@ -199,5 +199,15 @@ namespace SiparisYonetimSistemi
                 return builder.ToString();
             }
         }
+
+        private void LoginForm_Load_1(object sender, EventArgs e)
+        {
+            emailInputField.TabIndex= 0;
+            passwordInputField.TabIndex= 1;
+            loginButton.TabIndex= 2;
+            showPasswordCheckbox.TabIndex= 3;
+            this.AcceptButton = loginButton;
+
+        }
     }
 }
