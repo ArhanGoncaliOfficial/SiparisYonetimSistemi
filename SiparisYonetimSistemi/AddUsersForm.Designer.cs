@@ -226,7 +226,7 @@
             this.Controls.Add(this.NameBox);
             this.Text = "AddUsersForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddUsers";
+            this.Text = "Feasto";
             this.Load += new System.EventHandler(this.AddUsersForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
