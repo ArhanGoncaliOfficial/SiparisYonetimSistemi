@@ -1,15 +1,15 @@
 ﻿using System;
-using System.Data.SqlClient;
-using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
+using System.Security.Cryptography;
+using MySql.Data.MySqlClient; // MySQL kütüphanesi
 
 namespace SiparisYonetimSistemi
 {
     public partial class EditUserForm : Form
     {
         private int _id; // Kullanıcı ID'si
-        private string _connectionString = "Server=localhost; Database=SiparisYonetimDB; Integrated Security=True;";
+        private string _connectionString = "Server=localhost; Database=SiparisYonetimDB; Uid=root; Pwd=;";
         private const string AdminPassword = "root"; // Admin şifresi
 
         public EditUserForm(int id)
@@ -18,6 +18,7 @@ namespace SiparisYonetimSistemi
             _id = id;
             LoadUserData();
         }
+
         private void LoadRoles()
         {
             RoleBox.Items.Clear();
@@ -32,14 +33,14 @@ namespace SiparisYonetimSistemi
 
         private void LoadUserData()
         {
-            using (SqlConnection connection = new SqlConnection(_connectionString))
+            using (MySqlConnection connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
                 string query = "SELECT Username, FirstName, LastName, Email, PhoneNumber, Role FROM Users WHERE UserID = @UserID";
-                using (SqlCommand command = new SqlCommand(query, connection))
+                using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@UserID", _id);
-                    using (SqlDataReader reader = command.ExecuteReader())
+                    using (MySqlDataReader reader = command.ExecuteReader())
                     {
                         if (reader.Read())
                         {
@@ -50,19 +51,6 @@ namespace SiparisYonetimSistemi
                             phoneNumberBox.Text = reader["PhoneNumber"].ToString();
                             RoleBox.SelectedItem = reader["Role"].ToString();
                         }
-                        string role = reader["Role"].ToString();
-                        if (!string.IsNullOrEmpty(role))
-                        {
-                            if (RoleBox.Items.Contains(role)) // RoleBox içinde mevcutsa seç
-                            {
-                                RoleBox.SelectedItem = role;
-                            }
-                            else
-                            {
-                                RoleBox.Items.Add(role); // Eğer RoleBox'ta yoksa ekleyip seç
-                                RoleBox.SelectedItem = role;
-                            }
-                        }
                     }
                 }
             }
@@ -70,11 +58,11 @@ namespace SiparisYonetimSistemi
 
         private bool CheckOldPassword(int id, string oldPassword)
         {
-            using (SqlConnection connection = new SqlConnection(_connectionString))
+            using (MySqlConnection connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
                 string query = "SELECT PasswordHash FROM Users WHERE UserID = @UserID";
-                using (SqlCommand command = new SqlCommand(query, connection))
+                using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@UserID", id);
                     string storedHash = command.ExecuteScalar()?.ToString();
@@ -113,9 +101,7 @@ namespace SiparisYonetimSistemi
             if (string.IsNullOrWhiteSpace(NameBox.Text) ||
                 string.IsNullOrWhiteSpace(LastNameBox.Text) ||
                 string.IsNullOrWhiteSpace(EmailBox.Text) ||
-                string.IsNullOrWhiteSpace(phoneNumberBox.Text)
-                )
-
+                string.IsNullOrWhiteSpace(phoneNumberBox.Text))
             {
                 MessageBox.Show("Please fill in all fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -142,14 +128,14 @@ namespace SiparisYonetimSistemi
                 }
             }
 
-            using (SqlConnection connection = new SqlConnection(_connectionString))
+            using (MySqlConnection connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
                 string query = "UPDATE Users SET FirstName = @FirstName, LastName = @LastName, Email = @Email, PhoneNumber = @PhoneNumber, Role = @Role" +
                                (!string.IsNullOrWhiteSpace(NewPasswordBox.Text) ? ", PasswordHash = @PasswordHash" : "") +
                                " WHERE UserID = @UserID";
 
-                using (SqlCommand command = new SqlCommand(query, connection))
+                using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@FirstName", NameBox.Text);
                     command.Parameters.AddWithValue("@LastName", LastNameBox.Text);
