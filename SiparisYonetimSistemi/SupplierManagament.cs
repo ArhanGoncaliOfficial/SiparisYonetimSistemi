@@ -67,6 +67,7 @@ namespace SiparisYonetimSistemi
         private void SupplierManagament_Load(object sender, EventArgs e)
         {
             LoadSuppliers();
+            sidebar1.ParentFormRef = this;
         }
 
         private void AddButton_Click(object sender, EventArgs e)
