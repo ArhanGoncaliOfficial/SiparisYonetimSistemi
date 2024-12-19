@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
@@ -21,35 +21,35 @@ namespace SiparisYonetimSistemi
                 string.IsNullOrWhiteSpace(EmailBox.Text))
             {
                 MessageBox.Show("All fields must be filled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; // Exit the function if a field is missing
+                return;
             }
 
             if (PasswordHashBox.Text != PasswordAgainBox.Text)
             {
                 MessageBox.Show("Passwords do not match. Please try again.");
-                return; // Do not proceed if passwords do not match
+                return;
             }
 
             // Email validation using Regex
             if (!System.Text.RegularExpressions.Regex.IsMatch(EmailBox.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
             {
                 MessageBox.Show("Please enter a valid email address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; // Exit the function if email is invalid
+                return;
             }
 
-            // Here you can hash the password before storing it
-            string hashedPassword = HashPassword(PasswordHashBox.Text); // Example of password hashing method
+            // Hash the password before storing it
+            string hashedPassword = HashPassword(PasswordHashBox.Text);
 
-            // Connection string for SiparisYonetimDB database
-            string connectionString = "Server=localhost; Database=SiparisYonetimDB; Integrated Security=True;";
+            // MySQL Connection string
+            string connectionString = "Server=localhost;Database=SiparisYonetimDB;Uid=root;Pwd=;";
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
                     string query = "INSERT INTO Users (Username, PasswordHash, FirstName, LastName, Email, PhoneNumber, Role) VALUES (@Username, @PasswordHash, @FirstName, @LastName, @Email, @PhoneNumber, @Role)";
-                    SqlCommand cmd = new SqlCommand(query, conn);
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@Username", UsernameBox.Text);
                     cmd.Parameters.AddWithValue("@PasswordHash", hashedPassword);
                     cmd.Parameters.AddWithValue("@FirstName", NameBox.Text);
@@ -58,8 +58,7 @@ namespace SiparisYonetimSistemi
                     cmd.Parameters.AddWithValue("@PhoneNumber", phoneNumberBox.Text);
                     cmd.Parameters.AddWithValue("@Role", RoleBox.SelectedItem.ToString());
 
-
-                    cmd.ExecuteNonQuery(); // Execute the insert query
+                    cmd.ExecuteNonQuery();
                     MessageBox.Show("User added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
@@ -86,7 +85,7 @@ namespace SiparisYonetimSistemi
                 {
                     builder.Append(t.ToString("x2"));
                 }
-                return builder.ToString(); // Returns the hashed password
+                return builder.ToString();
             }
         }
 
@@ -104,27 +103,21 @@ namespace SiparisYonetimSistemi
 
             if (RoleBox.Items.Count > 0)
             {
-                RoleBox.SelectedIndex = 0; // Varsayılan olarak ilk elemanı seç
+                RoleBox.SelectedIndex = 0;
             }
-
             this.AcceptButton = AddButton;
-
-            //RoleBox.SelectedIndex = 0; // Optional: set a default selection
         }
 
         private void RoleBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedRole = RoleBox.SelectedItem.ToString();
 
-            // Example of what to do based on the selected role
             if (selectedRole == "Admin")
             {
-                // Code to execute for Admin role
                 MessageBox.Show("Admin role selected");
             }
             else if (selectedRole == "User")
             {
-                // Code to execute for User role
                 MessageBox.Show("User role selected");
             }
             else

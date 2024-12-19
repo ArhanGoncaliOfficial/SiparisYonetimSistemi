@@ -41,12 +41,15 @@
             this.acc_btn = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
             this.reports_btn = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.suppmng_btn = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -58,6 +61,7 @@
             this.flowLayoutPanel1.Controls.Add(this.panel11);
             this.flowLayoutPanel1.Controls.Add(this.panel12);
             this.flowLayoutPanel1.Controls.Add(this.panel13);
+            this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -192,11 +196,35 @@
             this.reports_btn.UseVisualStyleBackColor = true;
             this.reports_btn.Click += new System.EventHandler(this.reports_btn_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.suppmng_btn);
+            this.panel1.Location = new System.Drawing.Point(3, 418);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(245, 46);
+            this.panel1.TabIndex = 7;
+            // 
+            // suppmng_btn
+            // 
+            this.suppmng_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.suppmng_btn.ForeColor = System.Drawing.Color.White;
+            this.suppmng_btn.Location = new System.Drawing.Point(-3, -6);
+            this.suppmng_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.suppmng_btn.Name = "suppmng_btn";
+            this.suppmng_btn.Size = new System.Drawing.Size(255, 55);
+            this.suppmng_btn.TabIndex = 4;
+            this.suppmng_btn.Text = "          Supplier Management";
+            this.suppmng_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.suppmng_btn.UseVisualStyleBackColor = true;
+            this.suppmng_btn.Click += new System.EventHandler(this.suppmng_btn_Click);
+            // 
             // sidebar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "sidebar";
             this.Size = new System.Drawing.Size(248, 628);
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -205,6 +233,7 @@
             this.panel11.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -223,5 +252,7 @@
         private System.Windows.Forms.Button acc_btn;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Button reports_btn;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button suppmng_btn;
     }
 }
