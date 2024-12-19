@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SiparisYonetimSistemi
 {
@@ -21,56 +16,53 @@ namespace SiparisYonetimSistemi
         private void LoadSuppliers()
         {
             string query = @"
-        select 
-            s.SupplierID,
-            s.SupplierName,
-            s.ContactPhone,
-            m.Name as MaterialName,
-            m.Unit,
-            m.UnitPrice
-        from 
-            Suppliers s
-        left join 
-            Purchases p on s.SupplierID = p.SupplierID
-        left join 
-            Materials m on p.MaterialID = m.MaterialID";
+            SELECT 
+                sm.SupplierMaterialID,
+                s.SupplierName,
+                s.ContactPhone,
+                m.Name AS MaterialName,
+                sm.UnitPrice
+            FROM 
+                SupplierMaterials sm
+            JOIN 
+                Suppliers s ON sm.SupplierID = s.SupplierID
+            JOIN 
+                Materials m ON sm.MaterialID = m.MaterialID";
 
             DataTable dt = new DataTable();
-            using (SqlConnection conn = new SqlConnection("Server=localhost; Database=SiparisYonetimDB; Integrated Security=True;"))
+            using (MySqlConnection conn = new MySqlConnection("Server=localhost; Database=SiparisYonetimDB; Uid=root; Pwd=;"))
             {
-                SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
                 da.Fill(dt);
             }
-            if (dt.Rows.Count > 0)
-            {
-                dataGridView1.DataSource = dt;
-                dataGridView1.AutoGenerateColumns = true;
-            }
-            else
-            {
-                MessageBox.Show("No data found!");
-            }
 
-            // Edit ve Remove butonlarını ekle
+            dataGridView1.DataSource = dt;
+            dataGridView1.AutoGenerateColumns = true;
+
+            // Edit butonunu ekle
             if (!dataGridView1.Columns.Contains("Edit"))
             {
                 DataGridViewButtonColumn editButton = new DataGridViewButtonColumn();
                 editButton.Name = "Edit";
+                editButton.HeaderText = "Edit";
                 editButton.Text = "Edit";
                 editButton.UseColumnTextForButtonValue = true;
+                editButton.FlatStyle = FlatStyle.Standard;
                 dataGridView1.Columns.Add(editButton);
             }
 
+            // Remove butonunu ekle
             if (!dataGridView1.Columns.Contains("Remove"))
             {
                 DataGridViewButtonColumn removeButton = new DataGridViewButtonColumn();
                 removeButton.Name = "Remove";
+                removeButton.HeaderText = "Remove";
                 removeButton.Text = "Remove";
                 removeButton.UseColumnTextForButtonValue = true;
+                removeButton.FlatStyle = FlatStyle.Standard;
                 dataGridView1.Columns.Add(removeButton);
             }
         }
-
 
         private void SupplierManagament_Load(object sender, EventArgs e)
         {
@@ -80,10 +72,10 @@ namespace SiparisYonetimSistemi
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            SupplierAdd addSupplierForm = new SupplierAdd();
-            addSupplierForm.ShowDialog();
+            SupplierAdd addSupplierMaterialForm = new SupplierAdd();
+            addSupplierMaterialForm.ShowDialog();
 
-            if (addSupplierForm.DialogResult == DialogResult.OK)
+            if (addSupplierMaterialForm.DialogResult == DialogResult.OK)
             {
                 LoadSuppliers();
             }
@@ -92,34 +84,41 @@ namespace SiparisYonetimSistemi
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridView1.Columns[e.ColumnIndex].Name == "Edit")
-        {
-            int supplierId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["SupplierID"].Value);
-            EditSupplierForm editForm = new EditSupplierForm(supplierId);
-            editForm.ShowDialog();
-
-            if (editForm.DialogResult == DialogResult.OK)
             {
-                LoadSuppliers();
-            }
-        }
-        else if (dataGridView1.Columns[e.ColumnIndex].Name == "Remove")
-        {
-            int supplierId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["SupplierID"].Value);
-            DialogResult confirm = MessageBox.Show("Are you sure to delete this supplier?", "Confirm", MessageBoxButtons.YesNo);
+                int supplierMaterialId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["SupplierMaterialID"].Value);
+                EditSupplierForm editForm = new EditSupplierForm(supplierMaterialId);
+                editForm.ShowDialog();
 
-            if (confirm == DialogResult.Yes)
-            {
-                using (SqlConnection conn = new SqlConnection("Server=localhost; Database=SiparisYonetimDB; Integrated Security=True;"))
+                if (editForm.DialogResult == DialogResult.OK)
                 {
-                    string query = "delete from Suppliers where SupplierID = @SupplierID";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@SupplierID", supplierId);
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
+                    LoadSuppliers();
                 }
-                LoadSuppliers();
+            }
+            else if (dataGridView1.Columns[e.ColumnIndex].Name == "Remove")
+            {
+                int supplierMaterialId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["SupplierMaterialID"].Value);
+                DialogResult confirm = MessageBox.Show("Are you sure to delete this entry?", "Confirm", MessageBoxButtons.YesNo);
+
+                if (confirm == DialogResult.Yes)
+                {
+                    try
+                    {
+                        using (MySqlConnection conn = new MySqlConnection("Server=localhost; Database=SiparisYonetimDB; Uid=root; Pwd=;"))
+                        {
+                            string query = "DELETE FROM SupplierMaterials WHERE SupplierMaterialID = @SupplierMaterialID";
+                            MySqlCommand cmd = new MySqlCommand(query, conn);
+                            cmd.Parameters.AddWithValue("@SupplierMaterialID", supplierMaterialId);
+                            conn.Open();
+                            cmd.ExecuteNonQuery();
+                        }
+                        LoadSuppliers();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
         }
-            }
-        }
+    }
 }

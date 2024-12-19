@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
 namespace SiparisYonetimSistemi
@@ -20,25 +13,62 @@ namespace SiparisYonetimSistemi
 
         private void SupplierAdd_Load(object sender, EventArgs e)
         {
-            // Unit ComboBox'u doldur
+            // Material ComboBox'ı doldur
+            LoadMaterials();
+
+            // Tab index ayarları
+            SupplierNameBox.TabIndex = 0;
+            SupplierPhoneBox.TabIndex = 1;
+            MaterialComboBox.TabIndex = 2;
+            SupplierPriceBox.TabIndex = 3;
+            AddButton.TabIndex = 4;
             SupplierUniteBox.Items.Add("kg");
-            SupplierUniteBox.Items.Add("litre");
-            SupplierUniteBox.Items.Add("piece");
-            SupplierUniteBox.Items.Add("box");
+            SupplierUniteBox.SelectedIndex = 0;
+        }
+
+        private void LoadMaterials()
+        {
+            using (MySqlConnection conn = new MySqlConnection("Server=localhost; Database=SiparisYonetimDB; Uid=root; Pwd=;"))
+            {
+                string query = "SELECT MaterialID, Name FROM Materials";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                try
+                {
+                    conn.Open();
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    MaterialComboBox.Items.Clear();
+
+                    // Material verilerini ComboBox'a ekle
+                    while (reader.Read())
+                    {
+                        MaterialComboBox.Items.Add(new
+                        {
+                            Text = reader["Name"].ToString(),
+                            Value = reader["MaterialID"].ToString()
+                        });
+                    }
+
+                    // ComboBox'ın Display ve ValueMember ayarlarını yap
+                    MaterialComboBox.DisplayMember = "Text";
+                    MaterialComboBox.ValueMember = "Value";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading materials: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void AddButton_Click(object sender, EventArgs e)
         {
             string supplierName = SupplierNameBox.Text.Trim();
             string contactPhone = SupplierPhoneBox.Text.Trim();
-            string materialName = SupplierMaterialBox.Text.Trim();
-            string unit = SupplierUniteBox.SelectedItem?.ToString();
+            var selectedMaterial = MaterialComboBox.SelectedItem;
             decimal unitPrice;
 
-            // Gerekli alanları kontrol et
             if (string.IsNullOrWhiteSpace(supplierName) || string.IsNullOrWhiteSpace(contactPhone) ||
-                string.IsNullOrWhiteSpace(materialName) || string.IsNullOrWhiteSpace(unit) ||
-                !decimal.TryParse(SupplierPriceBox.Text.Trim(), out unitPrice))
+                selectedMaterial == null || !decimal.TryParse(SupplierPriceBox.Text.Trim(), out unitPrice))
             {
                 MessageBox.Show("Please fill in all fields correctly!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -46,48 +76,34 @@ namespace SiparisYonetimSistemi
 
             try
             {
-                // Veritabanına bağlan ve ekle
-                using (SqlConnection conn = new SqlConnection("Server=localhost; Database=SiparisYonetimDB; Integrated Security=True;"))
+                using (MySqlConnection conn = new MySqlConnection("Server=localhost; Database=SiparisYonetimDB; Uid=root; Pwd=;"))
                 {
                     conn.Open();
 
                     // Supplier ekle
                     string supplierQuery = @"
-                insert into Suppliers (SupplierName, ContactPhone)
-                values (@SupplierName, @ContactPhone);
-                select scope_identity();"; // Yeni eklenen SupplierID'yi alır
-                    SqlCommand supplierCmd = new SqlCommand(supplierQuery, conn);
-                    supplierCmd.Parameters.AddWithValue("@SupplierName", supplierName);
-                    supplierCmd.Parameters.AddWithValue("@ContactPhone", contactPhone);
+                    INSERT INTO Suppliers (SupplierName, ContactPhone)
+                    VALUES (?SupplierName, ?ContactPhone);
+                    SELECT LAST_INSERT_ID();";
+                    MySqlCommand supplierCmd = new MySqlCommand(supplierQuery, conn);
+                    supplierCmd.Parameters.AddWithValue("?SupplierName", supplierName);
+                    supplierCmd.Parameters.AddWithValue("?ContactPhone", contactPhone);
                     int supplierId = Convert.ToInt32(supplierCmd.ExecuteScalar());
 
-                    // Material ekle
-                    string materialQuery = @"
-                insert into Materials (Name, Unit, UnitPrice)
-                values (@MaterialName, @Unit, @UnitPrice);
-                select scope_identity();"; // Yeni eklenen MaterialID'yi alır
-                    SqlCommand materialCmd = new SqlCommand(materialQuery, conn);
-                    materialCmd.Parameters.AddWithValue("@MaterialName", materialName);
-                    materialCmd.Parameters.AddWithValue("@Unit", unit);
-                    materialCmd.Parameters.AddWithValue("@UnitPrice", unitPrice);
-                    int materialId = Convert.ToInt32(materialCmd.ExecuteScalar());
-
-                    // Purchase bağlantısı ekle
-                    string purchaseQuery = @"
-                insert into Purchases (MaterialID, SupplierID, Quantity, UnitPrice, TotalPrice, PurchaseDate)
-                values (@MaterialID, @SupplierID, @Quantity, @UnitPrice, @TotalPrice, GETDATE());";
-                    SqlCommand purchaseCmd = new SqlCommand(purchaseQuery, conn);
-                    purchaseCmd.Parameters.AddWithValue("@MaterialID", materialId);
-                    purchaseCmd.Parameters.AddWithValue("@SupplierID", supplierId);
-                    purchaseCmd.Parameters.AddWithValue("@Quantity", 0); // Varsayılan 0
-                    purchaseCmd.Parameters.AddWithValue("@UnitPrice", unitPrice);
-                    purchaseCmd.Parameters.AddWithValue("@TotalPrice", 0); // Varsayılan 0
-                    purchaseCmd.ExecuteNonQuery();
+                    // SupplierMaterial ekle
+                    string supplierMaterialQuery = @"
+                    INSERT INTO SupplierMaterials (SupplierID, MaterialID, UnitPrice)
+                    VALUES (?SupplierID, ?MaterialID, ?UnitPrice);";
+                    MySqlCommand supplierMaterialCmd = new MySqlCommand(supplierMaterialQuery, conn);
+                    supplierMaterialCmd.Parameters.AddWithValue("?SupplierID", supplierId);
+                    supplierMaterialCmd.Parameters.AddWithValue("?MaterialID", ((dynamic)selectedMaterial).Value);
+                    supplierMaterialCmd.Parameters.AddWithValue("?UnitPrice", unitPrice);
+                    supplierMaterialCmd.ExecuteNonQuery();
                 }
 
-                MessageBox.Show("Supplier and material added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.DialogResult = DialogResult.OK; // Ana forma değişiklik bildirimi gönder
-                this.Close(); // Formu kapat
+                MessageBox.Show("Supplier and material link added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
             catch (Exception ex)
             {

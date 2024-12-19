@@ -31,7 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SupplierNameBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.SupplierMaterialBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.SupplierUniteBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,6 +38,7 @@
             this.AddButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.SupplierPhoneBox = new System.Windows.Forms.TextBox();
+            this.MaterialComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -65,13 +65,6 @@
             this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Material Name";
-            // 
-            // SupplierMaterialBox
-            // 
-            this.SupplierMaterialBox.Location = new System.Drawing.Point(103, 127);
-            this.SupplierMaterialBox.Name = "SupplierMaterialBox";
-            this.SupplierMaterialBox.Size = new System.Drawing.Size(144, 20);
-            this.SupplierMaterialBox.TabIndex = 1;
             // 
             // label3
             // 
@@ -132,6 +125,14 @@
             this.SupplierPhoneBox.Size = new System.Drawing.Size(144, 20);
             this.SupplierPhoneBox.TabIndex = 8;
             // 
+            // MaterialComboBox
+            // 
+            this.MaterialComboBox.FormattingEnabled = true;
+            this.MaterialComboBox.Location = new System.Drawing.Point(103, 127);
+            this.MaterialComboBox.Name = "MaterialComboBox";
+            this.MaterialComboBox.Size = new System.Drawing.Size(144, 21);
+            this.MaterialComboBox.TabIndex = 4;
+            // 
             // SupplierAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -141,11 +142,11 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.MaterialComboBox);
             this.Controls.Add(this.SupplierUniteBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.SupplierPriceBox);
-            this.Controls.Add(this.SupplierMaterialBox);
             this.Controls.Add(this.SupplierNameBox);
             this.Controls.Add(this.label1);
             this.Name = "SupplierAdd";
@@ -161,7 +162,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox SupplierNameBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox SupplierMaterialBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox SupplierUniteBox;
         private System.Windows.Forms.Label label4;
@@ -169,5 +169,6 @@
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox SupplierPhoneBox;
+        private System.Windows.Forms.ComboBox MaterialComboBox;
     }
 }

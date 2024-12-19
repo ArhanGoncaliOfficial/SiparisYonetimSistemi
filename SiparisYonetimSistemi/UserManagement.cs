@@ -1,18 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient; // MySQL kütüphanesi
 
 namespace SiparisYonetimSistemi
 {
     public partial class UserManagement : Form
     {
+        private string connectionString = "Server=localhost;Database=SiparisYonetimDB;Uid=root;Pwd=;";
+
         public UserManagement()
         {
             InitializeComponent();
@@ -20,10 +17,7 @@ namespace SiparisYonetimSistemi
 
         private void UserManagement_Load(object sender, EventArgs e)
         {
-            // TODO: Bu kod satırı 'siparisYonetimDBDataSet.Users' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-            this.usersTableAdapter.Fill(this.siparisYonetimDBDataSet.Users);
-            // TODO: Bu kod satırı 'siparisYonetimDBDataSet.Users' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-            this.usersTableAdapter.Fill(this.siparisYonetimDBDataSet.Users);
+            LoadData(); // Kullanıcıları yükle
             sidebar1.ParentFormRef = this;
         }
 
@@ -32,38 +26,35 @@ namespace SiparisYonetimSistemi
             try
             {
                 AddUsersForm addUserForm = new AddUsersForm();
-                addUserForm.Show();
+                addUserForm.ShowDialog();
+                if (addUserForm.DialogResult == DialogResult.OK)
+                {
+                    LoadData(); // Veri ekledikten sonra listeyi yenile
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Bir hata oluştu: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
-
-    private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dataGridView1.Columns["DeleteButton"].Index && e.RowIndex >= 0)
             {
-                // Silme onayı iste
-                var result = MessageBox.Show("Are you sure about want the delete this data?",
+                var result = MessageBox.Show("Are you sure you want to delete this data?",
                                              "Deletion Confirmation",
                                              MessageBoxButtons.YesNo,
                                              MessageBoxIcon.Warning);
 
                 if (result == DialogResult.Yes)
                 {
-                    // Seçilen satırdaki ID değerini al
                     string id = dataGridView1.Rows[e.RowIndex].Cells["UserId"].Value.ToString();
-
-                    // Veritabanından sil
-                    string connectionString = "Server=LocalHost;Database=SiparisYonetimDB;Trusted_Connection=True;";
-                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    using (MySqlConnection connection = new MySqlConnection(connectionString))
                     {
                         string query = "DELETE FROM Users WHERE UserId = @Id";
 
-                        using (SqlCommand command = new SqlCommand(query, connection))
+                        using (MySqlCommand command = new MySqlCommand(query, connection))
                         {
                             command.Parameters.AddWithValue("@Id", id);
                             connection.Open();
@@ -71,60 +62,52 @@ namespace SiparisYonetimSistemi
                         }
                     }
 
-                    // DataGridView'den satırı kaldır
                     dataGridView1.Rows.RemoveAt(e.RowIndex);
-
                     MessageBox.Show("Data deleted successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 
             if (e.ColumnIndex == dataGridView1.Columns["EditButton"].Index && e.RowIndex >= 0)
             {
-                
                 string selectedId = dataGridView1.Rows[e.RowIndex].Cells["UserID"].Value.ToString();
                 int id = Convert.ToInt32(selectedId);
                 EditUserForm editForm = new EditUserForm(id);
-                editForm.ShowDialog(); 
+                editForm.ShowDialog();
+                if (editForm.DialogResult == DialogResult.OK)
+                {
+                    LoadData(); // Düzenlemeden sonra veriyi yenile
+                }
             }
-
         }
+
         private void LoadData()
         {
-            // Veritabanı bağlantı dizesi
-            string connectionString = "Server=localhost;Database=SiparisYonetimDB;Trusted_Connection=True;";
-
-            // SQL sorgusu
             string query = "SELECT * FROM Users";
-
-            // DataTable oluşturuyoruz
             DataTable dataTable = new DataTable();
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 try
                 {
                     connection.Open();
-
-                    // SQL komutunu çalıştır
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
-                        SqlDataAdapter adapter = new SqlDataAdapter(command);
-                        adapter.Fill(dataTable); 
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                        adapter.Fill(dataTable);
                     }
 
-                    // DataGridView'e bağla
                     dataGridView1.DataSource = dataTable;
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Hata: " + ex.Message); // Hata mesajını göster
+                    MessageBox.Show("Hata: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
 
         private void RefreshButton_Click(object sender, EventArgs e)
         {
-            LoadData();
+            LoadData(); // Veriyi yenile
         }
     }
 }

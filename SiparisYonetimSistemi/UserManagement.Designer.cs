@@ -28,30 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.AddButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.siparisYonetimDBDataSet = new SiparisYonetimSistemi.SiparisYonetimDBDataSet();
-            this.usersTableAdapter = new SiparisYonetimSistemi.SiparisYonetimDBDataSetTableAdapters.UsersTableAdapter();
-            this.UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastLoginDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PasswordHash = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EditButton = new System.Windows.Forms.DataGridViewButtonColumn();
             this.DeleteButton = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.PasswordHash = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sidebar1 = new SiparisYonetimSistemi.sidebar();
             this.RefreshButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siparisYonetimDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -85,89 +71,23 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.UserID,
-            this.usernameDataGridViewTextBoxColumn,
-            this.firstNameDataGridViewTextBoxColumn,
-            this.lastNameDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.roleDataGridViewTextBoxColumn,
-            this.phoneNumberDataGridViewTextBoxColumn,
-            this.lastLoginDateDataGridViewTextBoxColumn,
             this.PasswordHash,
             this.EditButton,
             this.DeleteButton});
-            this.dataGridView1.DataSource = this.usersBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(225, 106);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(644, 338);
             this.dataGridView1.TabIndex = 25;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // usersBindingSource
+            // PasswordHash
             // 
-            this.usersBindingSource.DataMember = "Users";
-            this.usersBindingSource.DataSource = this.siparisYonetimDBDataSet;
-            // 
-            // siparisYonetimDBDataSet
-            // 
-            this.siparisYonetimDBDataSet.DataSetName = "SiparisYonetimDBDataSet";
-            this.siparisYonetimDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
-            // 
-            // UserID
-            // 
-            this.UserID.DataPropertyName = "UserID";
-            this.UserID.HeaderText = "UserID";
-            this.UserID.Name = "UserID";
-            this.UserID.ReadOnly = true;
-            // 
-            // usernameDataGridViewTextBoxColumn
-            // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // roleDataGridViewTextBoxColumn
-            // 
-            this.roleDataGridViewTextBoxColumn.DataPropertyName = "Role";
-            this.roleDataGridViewTextBoxColumn.HeaderText = "Role";
-            this.roleDataGridViewTextBoxColumn.Name = "roleDataGridViewTextBoxColumn";
-            // 
-            // phoneNumberDataGridViewTextBoxColumn
-            // 
-            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
-            // 
-            // lastLoginDateDataGridViewTextBoxColumn
-            // 
-            this.lastLoginDateDataGridViewTextBoxColumn.DataPropertyName = "LastLoginDate";
-            this.lastLoginDateDataGridViewTextBoxColumn.HeaderText = "LastLoginDate";
-            this.lastLoginDateDataGridViewTextBoxColumn.Name = "lastLoginDateDataGridViewTextBoxColumn";
+            this.PasswordHash.DataPropertyName = "PasswordHash";
+            this.PasswordHash.HeaderText = "PasswordHash";
+            this.PasswordHash.Name = "PasswordHash";
+            this.PasswordHash.Visible = false;
             // 
             // EditButton
             // 
@@ -183,18 +103,11 @@
             this.DeleteButton.Text = "Delete";
             this.DeleteButton.UseColumnTextForButtonValue = true;
             // 
-            // PasswordHash
-            // 
-            this.PasswordHash.DataPropertyName = "PasswordHash";
-            this.PasswordHash.HeaderText = "PasswordHash";
-            this.PasswordHash.Name = "PasswordHash";
-            this.PasswordHash.Visible = false;
-            // 
             // sidebar1
             // 
             this.sidebar1.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar1.Location = new System.Drawing.Point(0, 0);
-            this.sidebar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sidebar1.Margin = new System.Windows.Forms.Padding(2);
             this.sidebar1.Name = "sidebar1";
             this.sidebar1.ParentFormRef = null;
             this.sidebar1.Size = new System.Drawing.Size(186, 510);
@@ -226,8 +139,6 @@
             this.Text = "UserManagement";
             this.Load += new System.EventHandler(this.UserManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.siparisYonetimDBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,17 +150,6 @@
         private sidebar sidebar1;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private SiparisYonetimDBDataSet siparisYonetimDBDataSet;
-        private System.Windows.Forms.BindingSource usersBindingSource;
-        private SiparisYonetimDBDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UserID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn roleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastLoginDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn EditButton;
         private System.Windows.Forms.DataGridViewButtonColumn DeleteButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn PasswordHash;

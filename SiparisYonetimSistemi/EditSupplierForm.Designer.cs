@@ -36,9 +36,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SupplierPriceBox = new System.Windows.Forms.TextBox();
-            this.SupplierMaterialBox = new System.Windows.Forms.TextBox();
             this.SupplierNameBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.MaterialNameBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // SupplierPhoneBox
@@ -109,13 +109,6 @@
             this.SupplierPriceBox.Size = new System.Drawing.Size(144, 20);
             this.SupplierPriceBox.TabIndex = 10;
             // 
-            // SupplierMaterialBox
-            // 
-            this.SupplierMaterialBox.Location = new System.Drawing.Point(110, 119);
-            this.SupplierMaterialBox.Name = "SupplierMaterialBox";
-            this.SupplierMaterialBox.Size = new System.Drawing.Size(144, 20);
-            this.SupplierMaterialBox.TabIndex = 11;
-            // 
             // SupplierNameBox
             // 
             this.SupplierNameBox.Location = new System.Drawing.Point(110, 19);
@@ -132,6 +125,14 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Supplier Name";
             // 
+            // MaterialNameBox
+            // 
+            this.MaterialNameBox.FormattingEnabled = true;
+            this.MaterialNameBox.Location = new System.Drawing.Point(110, 119);
+            this.MaterialNameBox.Name = "MaterialNameBox";
+            this.MaterialNameBox.Size = new System.Drawing.Size(144, 21);
+            this.MaterialNameBox.TabIndex = 15;
+            // 
             // EditSupplierForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -141,15 +142,16 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.EditButon);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.MaterialNameBox);
             this.Controls.Add(this.SupplierUniteBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.SupplierPriceBox);
-            this.Controls.Add(this.SupplierMaterialBox);
             this.Controls.Add(this.SupplierNameBox);
             this.Controls.Add(this.label1);
             this.Name = "EditSupplierForm";
             this.Text = "EditSupplierForm";
+            this.Load += new System.EventHandler(this.EditSupplierForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,8 +167,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox SupplierPriceBox;
-        private System.Windows.Forms.TextBox SupplierMaterialBox;
         private System.Windows.Forms.TextBox SupplierNameBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox MaterialNameBox;
     }
 }

@@ -120,6 +120,12 @@
     <Compile Include="AccountingDetails.Designer.cs">
       <DependentUpon>AccountingDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddStockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStockForm.Designer.cs">
+      <DependentUpon>AddStockForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddUsersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +155,12 @@
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialManagament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialManagament.Designer.cs">
+      <DependentUpon>MaterialManagament.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuManagament.cs">
       <SubType>Form</SubType>
@@ -196,6 +208,9 @@
     <EmbeddedResource Include="AccountingDetails.resx">
       <DependentUpon>AccountingDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddStockForm.resx">
+      <DependentUpon>AddStockForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddUsersForm.resx">
       <DependentUpon>AddUsersForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialManagament.resx">
+      <DependentUpon>MaterialManagament.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuManagament.resx">
       <DependentUpon>MenuManagament.cs</DependentUpon>
