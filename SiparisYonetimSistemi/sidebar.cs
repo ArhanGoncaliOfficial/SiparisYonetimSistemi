@@ -46,7 +46,7 @@ namespace SiparisYonetimSistemi
 
         private void menu_m_btn_Click(object sender, EventArgs e)
         {
-            MenuManagament menuManagementForm = new MenuManagament();
+            MenuYonetimFormu menuManagementForm = new MenuYonetimFormu();
             menuManagementForm.StartPosition = FormStartPosition.CenterScreen;
             menuManagementForm.Show();
 
