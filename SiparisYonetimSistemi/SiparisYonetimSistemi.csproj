@@ -126,11 +126,23 @@
     <Compile Include="AddNewMenuItem.Designer.cs">
       <DependentUpon>AddNewMenuItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddStockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStockForm.Designer.cs">
+      <DependentUpon>AddStockForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddUsersForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddUsersForm.Designer.cs">
       <DependentUpon>AddUsersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditSupplierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditSupplierForm.Designer.cs">
+      <DependentUpon>EditSupplierForm.cs</DependentUpon>
     </Compile>
     <Compile Include="EditUserForm.cs">
       <SubType>Form</SubType>
@@ -149,6 +161,12 @@
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialManagament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialManagament.Designer.cs">
+      <DependentUpon>MaterialManagament.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuManagement.cs">
       <SubType>Form</SubType>
@@ -205,8 +223,14 @@
     <EmbeddedResource Include="AddNewMenuItem.resx">
       <DependentUpon>AddNewMenuItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddStockForm.resx">
+      <DependentUpon>AddStockForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddUsersForm.resx">
       <DependentUpon>AddUsersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditSupplierForm.resx">
+      <DependentUpon>EditSupplierForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditUserForm.resx">
       <DependentUpon>EditUserForm.cs</DependentUpon>
@@ -216,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialManagament.resx">
+      <DependentUpon>MaterialManagament.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuManagement.resx">
       <DependentUpon>MenuManagement.cs</DependentUpon>
