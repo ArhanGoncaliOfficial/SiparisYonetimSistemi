@@ -98,7 +98,8 @@ namespace SiparisYonetimSistemi
 
         private void EditButton_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(NameBox.Text) ||
+            if (string.IsNullOrWhiteSpace(UsernameBox.Text) ||
+                string.IsNullOrWhiteSpace(NameBox.Text) ||
                 string.IsNullOrWhiteSpace(LastNameBox.Text) ||
                 string.IsNullOrWhiteSpace(EmailBox.Text) ||
                 string.IsNullOrWhiteSpace(phoneNumberBox.Text))
@@ -131,12 +132,13 @@ namespace SiparisYonetimSistemi
             using (MySqlConnection connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
-                string query = "UPDATE Users SET FirstName = @FirstName, LastName = @LastName, Email = @Email, PhoneNumber = @PhoneNumber, Role = @Role" +
+                string query = "UPDATE Users SET Username = @Username, FirstName = @FirstName, LastName = @LastName, Email = @Email, PhoneNumber = @PhoneNumber, Role = @Role" +
                                (!string.IsNullOrWhiteSpace(NewPasswordBox.Text) ? ", PasswordHash = @PasswordHash" : "") +
                                " WHERE UserID = @UserID";
 
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
+                    command.Parameters.AddWithValue("@Username", UsernameBox.Text);
                     command.Parameters.AddWithValue("@FirstName", NameBox.Text);
                     command.Parameters.AddWithValue("@LastName", LastNameBox.Text);
                     command.Parameters.AddWithValue("@Email", EmailBox.Text);
@@ -156,6 +158,12 @@ namespace SiparisYonetimSistemi
 
             MessageBox.Show("User information updated successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
+        }
+
+        private void ShowPassCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            OldPasswordHash.PasswordChar = ShowPassCheckBox.Checked ? '\0' : '*';
+            NewPasswordBox.PasswordChar = ShowPassCheckBox.Checked ? '\0' : '*';
         }
     }
 }

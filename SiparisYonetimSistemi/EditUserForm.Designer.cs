@@ -65,6 +65,7 @@
             this.ShowPassCheckBox.TabIndex = 26;
             this.ShowPassCheckBox.Text = "Show Password";
             this.ShowPassCheckBox.UseVisualStyleBackColor = true;
+            this.ShowPassCheckBox.CheckedChanged += new System.EventHandler(this.ShowPassCheckBox_CheckedChanged);
             // 
             // Role
             // 
@@ -222,7 +223,6 @@
             this.Controls.Add(this.LastNameBox);
             this.Controls.Add(this.UsernameBox);
             this.Controls.Add(this.NameBox);
-            this.Text = "EditUserForm";
             this.Text = "EditUsersForm";
             this.Load += new System.EventHandler(this.EditUsersForm_Load);
             this.ResumeLayout(false);
