@@ -49,35 +49,12 @@
             this.table10 = new System.Windows.Forms.Button();
             this.table11 = new System.Windows.Forms.Button();
             this.table12 = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.price = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.total = new System.Windows.Forms.Label();
-            this.payment = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanelOrders = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.sidebar1 = new SiparisYonetimSistemi.sidebar();
             this.aval_panel.SuspendLayout();
             this.tkn_panel.SuspendLayout();
             this.ordered_panel.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // aval_panel
@@ -86,7 +63,7 @@
             this.aval_panel.Controls.Add(this.aval_count);
             this.aval_panel.Controls.Add(this.aval_label);
             this.aval_panel.Location = new System.Drawing.Point(248, 32);
-            this.aval_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.aval_panel.Margin = new System.Windows.Forms.Padding(2);
             this.aval_panel.Name = "aval_panel";
             this.aval_panel.Size = new System.Drawing.Size(112, 69);
             this.aval_panel.TabIndex = 0;
@@ -120,7 +97,7 @@
             this.tkn_panel.Controls.Add(this.tkn_count);
             this.tkn_panel.Controls.Add(this.tkn_label);
             this.tkn_panel.Location = new System.Drawing.Point(382, 32);
-            this.tkn_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tkn_panel.Margin = new System.Windows.Forms.Padding(2);
             this.tkn_panel.Name = "tkn_panel";
             this.tkn_panel.Size = new System.Drawing.Size(112, 69);
             this.tkn_panel.TabIndex = 0;
@@ -153,7 +130,7 @@
             this.ordered_panel.Controls.Add(this.ordered_count);
             this.ordered_panel.Controls.Add(this.ordered_label);
             this.ordered_panel.Location = new System.Drawing.Point(515, 32);
-            this.ordered_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ordered_panel.Margin = new System.Windows.Forms.Padding(2);
             this.ordered_panel.Name = "ordered_panel";
             this.ordered_panel.Size = new System.Drawing.Size(112, 69);
             this.ordered_panel.TabIndex = 0;
@@ -183,7 +160,7 @@
             // table1
             // 
             this.table1.Location = new System.Drawing.Point(256, 167);
-            this.table1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.table1.Margin = new System.Windows.Forms.Padding(2);
             this.table1.Name = "table1";
             this.table1.Size = new System.Drawing.Size(75, 65);
             this.table1.TabIndex = 1;
@@ -193,7 +170,7 @@
             // table2
             // 
             this.table2.Location = new System.Drawing.Point(351, 167);
-            this.table2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.table2.Margin = new System.Windows.Forms.Padding(2);
             this.table2.Name = "table2";
             this.table2.Size = new System.Drawing.Size(75, 65);
             this.table2.TabIndex = 1;
@@ -203,7 +180,7 @@
             // table3
             // 
             this.table3.Location = new System.Drawing.Point(452, 167);
-            this.table3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.table3.Margin = new System.Windows.Forms.Padding(2);
             this.table3.Name = "table3";
             this.table3.Size = new System.Drawing.Size(75, 65);
             this.table3.TabIndex = 1;
@@ -213,7 +190,7 @@
             // table4
             // 
             this.table4.Location = new System.Drawing.Point(545, 167);
-            this.table4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.table4.Margin = new System.Windows.Forms.Padding(2);
             this.table4.Name = "table4";
             this.table4.Size = new System.Drawing.Size(75, 65);
             this.table4.TabIndex = 1;
@@ -223,7 +200,7 @@
             // table5
             // 
             this.table5.Location = new System.Drawing.Point(256, 257);
-            this.table5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.table5.Margin = new System.Windows.Forms.Padding(2);
             this.table5.Name = "table5";
             this.table5.Size = new System.Drawing.Size(75, 65);
             this.table5.TabIndex = 1;
@@ -233,7 +210,7 @@
             // table6
             // 
             this.table6.Location = new System.Drawing.Point(351, 257);
-            this.table6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.table6.Margin = new System.Windows.Forms.Padding(2);
             this.table6.Name = "table6";
             this.table6.Size = new System.Drawing.Size(75, 65);
             this.table6.TabIndex = 1;
@@ -243,7 +220,7 @@
             // table7
             // 
             this.table7.Location = new System.Drawing.Point(452, 257);
-            this.table7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.table7.Margin = new System.Windows.Forms.Padding(2);
             this.table7.Name = "table7";
             this.table7.Size = new System.Drawing.Size(75, 65);
             this.table7.TabIndex = 1;
@@ -253,7 +230,7 @@
             // table8
             // 
             this.table8.Location = new System.Drawing.Point(545, 257);
-            this.table8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.table8.Margin = new System.Windows.Forms.Padding(2);
             this.table8.Name = "table8";
             this.table8.Size = new System.Drawing.Size(75, 65);
             this.table8.TabIndex = 1;
@@ -263,7 +240,7 @@
             // table9
             // 
             this.table9.Location = new System.Drawing.Point(256, 348);
-            this.table9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.table9.Margin = new System.Windows.Forms.Padding(2);
             this.table9.Name = "table9";
             this.table9.Size = new System.Drawing.Size(75, 65);
             this.table9.TabIndex = 1;
@@ -273,7 +250,7 @@
             // table10
             // 
             this.table10.Location = new System.Drawing.Point(351, 348);
-            this.table10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.table10.Margin = new System.Windows.Forms.Padding(2);
             this.table10.Name = "table10";
             this.table10.Size = new System.Drawing.Size(75, 65);
             this.table10.TabIndex = 1;
@@ -283,7 +260,7 @@
             // table11
             // 
             this.table11.Location = new System.Drawing.Point(452, 348);
-            this.table11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.table11.Margin = new System.Windows.Forms.Padding(2);
             this.table11.Name = "table11";
             this.table11.Size = new System.Drawing.Size(75, 65);
             this.table11.TabIndex = 1;
@@ -293,213 +270,29 @@
             // table12
             // 
             this.table12.Location = new System.Drawing.Point(545, 348);
-            this.table12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.table12.Margin = new System.Windows.Forms.Padding(2);
             this.table12.Name = "table12";
             this.table12.Size = new System.Drawing.Size(75, 65);
             this.table12.TabIndex = 1;
             this.table12.Text = "Table 12";
             this.table12.UseVisualStyleBackColor = true;
             // 
-            // panel4
+            // flowLayoutPanelOrders
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel4.Controls.Add(this.price);
-            this.panel4.Controls.Add(this.label15);
-            this.panel4.Controls.Add(this.total);
-            this.panel4.Controls.Add(this.payment);
-            this.panel4.Controls.Add(this.panel7);
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(682, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(204, 510);
-            this.panel4.TabIndex = 2;
+            this.flowLayoutPanelOrders.Location = new System.Drawing.Point(652, 0);
+            this.flowLayoutPanelOrders.Name = "flowLayoutPanelOrders";
+            this.flowLayoutPanelOrders.Size = new System.Drawing.Size(234, 431);
+            this.flowLayoutPanelOrders.TabIndex = 4;
             // 
-            // price
+            // lblTotal
             // 
-            this.price.AutoSize = true;
-            this.price.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.price.Location = new System.Drawing.Point(108, 409);
-            this.price.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.price.Name = "price";
-            this.price.Size = new System.Drawing.Size(52, 24);
-            this.price.TabIndex = 4;
-            this.price.Text = "XXX";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label15.Location = new System.Drawing.Point(38, 19);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(119, 24);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "Table Name ";
-            // 
-            // total
-            // 
-            this.total.AutoSize = true;
-            this.total.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.total.Location = new System.Drawing.Point(38, 409);
-            this.total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.total.Name = "total";
-            this.total.Size = new System.Drawing.Size(71, 24);
-            this.total.TabIndex = 2;
-            this.total.Text = "Total :  ";
-            // 
-            // payment
-            // 
-            this.payment.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.payment.Location = new System.Drawing.Point(34, 448);
-            this.payment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.payment.Name = "payment";
-            this.payment.Size = new System.Drawing.Size(146, 39);
-            this.payment.TabIndex = 1;
-            this.payment.Text = "Payment";
-            this.payment.UseVisualStyleBackColor = false;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel7.Controls.Add(this.label13);
-            this.panel7.Controls.Add(this.label12);
-            this.panel7.Controls.Add(this.label9);
-            this.panel7.Controls.Add(this.pictureBox3);
-            this.panel7.Location = new System.Drawing.Point(34, 277);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(147, 96);
-            this.panel7.TabIndex = 0;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(86, -59);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(40, 13);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "$ XX.X";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(86, 54);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(40, 13);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "$ XX.X";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(76, 24);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 13);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Food Name";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 21);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(61, 56);
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel6.Controls.Add(this.label11);
-            this.panel6.Controls.Add(this.label8);
-            this.panel6.Controls.Add(this.pictureBox2);
-            this.panel6.Location = new System.Drawing.Point(34, 168);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(147, 96);
-            this.panel6.TabIndex = 0;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(86, 50);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 13);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "$ XX.X";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(76, 22);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 13);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Food Name";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 19);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(61, 56);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel5.Controls.Add(this.label10);
-            this.panel5.Controls.Add(this.label7);
-            this.panel5.Controls.Add(this.pictureBox1);
-            this.panel5.Location = new System.Drawing.Point(34, 59);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(147, 96);
-            this.panel5.TabIndex = 0;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(86, 50);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(40, 13);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "$ XX.X";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(76, 21);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Food Name";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 18);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(61, 56);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(658, 434);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(54, 20);
+            this.lblTotal.TabIndex = 5;
+            this.lblTotal.Text = "Total:";
             // 
             // sidebar1
             // 
@@ -516,8 +309,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(886, 510);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.flowLayoutPanelOrders);
             this.Controls.Add(this.sidebar1);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.table12);
             this.Controls.Add(this.table11);
             this.Controls.Add(this.table10);
@@ -533,7 +327,7 @@
             this.Controls.Add(this.ordered_panel);
             this.Controls.Add(this.tkn_panel);
             this.Controls.Add(this.aval_panel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HomePageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePageForm";
@@ -544,18 +338,8 @@
             this.tkn_panel.PerformLayout();
             this.ordered_panel.ResumeLayout(false);
             this.ordered_panel.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -581,26 +365,11 @@
         private System.Windows.Forms.Button table10;
         private System.Windows.Forms.Button table11;
         private System.Windows.Forms.Button table12;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button payment;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label total;
-        private System.Windows.Forms.Label price;
         private System.Windows.Forms.Label ordered_label;
         private SiparisYonetimSistemi.sidebar sidebar1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelOrders;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Button paymentButton;
     }
 }
 
