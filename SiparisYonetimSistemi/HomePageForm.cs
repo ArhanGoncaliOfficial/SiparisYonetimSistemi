@@ -1,5 +1,4 @@
-﻿using deneme001;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using SiparisYonetimSistemi;
 using System;
 using System.Collections.Generic;
