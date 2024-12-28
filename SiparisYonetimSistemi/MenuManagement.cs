@@ -259,7 +259,7 @@ namespace SiparisYonetimSistemi
 
         private void MenuYonetimFormu_Load(object sender, EventArgs e)
         {
-            sidebar1.ParentFormRef = this;
+            //sidebar1.ParentFormRef = this;
         }
     }
 }
