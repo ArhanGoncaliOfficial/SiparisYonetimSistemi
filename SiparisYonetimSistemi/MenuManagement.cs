@@ -200,14 +200,14 @@ namespace SiparisYonetimSistemi
             this.dataGridView_MenuTable = new System.Windows.Forms.DataGridView();
             this.menuManagementHeader = new System.Windows.Forms.Label();
             this.addMenuItemButton = new System.Windows.Forms.Button();
-            this.sidebar3 = new SiparisYonetimSistemi.sidebar();
+            this.sidebar1 = new SiparisYonetimSistemi.sidebar();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_MenuTable)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView_MenuTable
             // 
             this.dataGridView_MenuTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_MenuTable.Location = new System.Drawing.Point(347, 94);
+            this.dataGridView_MenuTable.Location = new System.Drawing.Point(273, 66);
             this.dataGridView_MenuTable.Name = "dataGridView_MenuTable";
             this.dataGridView_MenuTable.RowHeadersWidth = 51;
             this.dataGridView_MenuTable.Size = new System.Drawing.Size(630, 350);
@@ -217,7 +217,7 @@ namespace SiparisYonetimSistemi
             // 
             this.menuManagementHeader.AutoSize = true;
             this.menuManagementHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuManagementHeader.Location = new System.Drawing.Point(343, 57);
+            this.menuManagementHeader.Location = new System.Drawing.Point(269, 29);
             this.menuManagementHeader.Name = "menuManagementHeader";
             this.menuManagementHeader.Size = new System.Drawing.Size(219, 29);
             this.menuManagementHeader.TabIndex = 2;
@@ -226,27 +226,27 @@ namespace SiparisYonetimSistemi
             // 
             // addMenuItemButton
             // 
-            this.addMenuItemButton.Location = new System.Drawing.Point(889, 450);
+            this.addMenuItemButton.Location = new System.Drawing.Point(815, 422);
             this.addMenuItemButton.Name = "addMenuItemButton";
             this.addMenuItemButton.Size = new System.Drawing.Size(88, 23);
             this.addMenuItemButton.TabIndex = 3;
             this.addMenuItemButton.Text = "Add Menu Item";
             this.addMenuItemButton.UseVisualStyleBackColor = true;
             // 
-            // sidebar3
+            // sidebar1
             // 
-            this.sidebar3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sidebar3.Location = new System.Drawing.Point(0, 0);
-            this.sidebar3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.sidebar3.Name = "sidebar3";
-            this.sidebar3.ParentFormRef = null;
-            this.sidebar3.Size = new System.Drawing.Size(248, 628);
-            this.sidebar3.TabIndex = 4;
+            this.sidebar1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sidebar1.Location = new System.Drawing.Point(0, 0);
+            this.sidebar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sidebar1.Name = "sidebar1";
+            this.sidebar1.ParentFormRef = null;
+            this.sidebar1.Size = new System.Drawing.Size(248, 473);
+            this.sidebar1.TabIndex = 4;
             // 
             // MenuYonetimFormu
             // 
-            this.ClientSize = new System.Drawing.Size(1602, 628);
-            this.Controls.Add(this.sidebar3);
+            this.ClientSize = new System.Drawing.Size(967, 473);
+            this.Controls.Add(this.sidebar1);
             this.Controls.Add(this.addMenuItemButton);
             this.Controls.Add(this.menuManagementHeader);
             this.Controls.Add(this.dataGridView_MenuTable);
@@ -260,7 +260,7 @@ namespace SiparisYonetimSistemi
 
         private void MenuYonetimFormu_Load(object sender, EventArgs e)
         {
-            //sidebar1.ParentFormRef = this;
+            sidebar1.ParentFormRef = this;
         }
     }
 }
