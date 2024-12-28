@@ -205,9 +205,9 @@
         private System.Windows.Forms.Button button3;
         private SiparisYonetimSistemi.sidebar sidebar1;
         private SiparisYonetimSistemi.sidebar sidebar2;
-        private sidebar sidebar3;
         private System.Windows.Forms.DataGridView dataGridView_MenuTable;
         private System.Windows.Forms.Label menuManagementHeader;
         private System.Windows.Forms.Button addMenuItemButton;
+        private sidebar sidebar3;
     }
 }
