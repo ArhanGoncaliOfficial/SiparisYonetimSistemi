@@ -54,6 +54,7 @@ namespace SiparisYonetimSistemi
         private void MaterialManagament_Load_1(object sender, EventArgs e)
         {
             LoadMaterials(); // Materyalleri yükle
+            sidebar1.ParentFormRef = this;
         }
     }
 }

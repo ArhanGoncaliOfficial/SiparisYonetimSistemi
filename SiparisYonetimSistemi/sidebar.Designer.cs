@@ -43,6 +43,10 @@
             this.reports_btn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.suppmng_btn = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.mtrlmng_btn = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.ordrmng_btn = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -50,6 +54,8 @@
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -59,9 +65,11 @@
             this.flowLayoutPanel1.Controls.Add(this.panel9);
             this.flowLayoutPanel1.Controls.Add(this.panel10);
             this.flowLayoutPanel1.Controls.Add(this.panel11);
+            this.flowLayoutPanel1.Controls.Add(this.panel1);
+            this.flowLayoutPanel1.Controls.Add(this.panel2);
+            this.flowLayoutPanel1.Controls.Add(this.panel3);
             this.flowLayoutPanel1.Controls.Add(this.panel12);
             this.flowLayoutPanel1.Controls.Add(this.panel13);
-            this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -153,7 +161,7 @@
             // panel12
             // 
             this.panel12.Controls.Add(this.acc_btn);
-            this.panel12.Location = new System.Drawing.Point(3, 318);
+            this.panel12.Location = new System.Drawing.Point(3, 468);
             this.panel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(245, 46);
@@ -176,7 +184,7 @@
             // panel13
             // 
             this.panel13.Controls.Add(this.reports_btn);
-            this.panel13.Location = new System.Drawing.Point(3, 368);
+            this.panel13.Location = new System.Drawing.Point(3, 518);
             this.panel13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(245, 46);
@@ -199,7 +207,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.suppmng_btn);
-            this.panel1.Location = new System.Drawing.Point(3, 418);
+            this.panel1.Location = new System.Drawing.Point(3, 318);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(245, 46);
@@ -219,6 +227,52 @@
             this.suppmng_btn.UseVisualStyleBackColor = true;
             this.suppmng_btn.Click += new System.EventHandler(this.suppmng_btn_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.mtrlmng_btn);
+            this.panel2.Location = new System.Drawing.Point(3, 368);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(245, 46);
+            this.panel2.TabIndex = 8;
+            // 
+            // mtrlmng_btn
+            // 
+            this.mtrlmng_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mtrlmng_btn.ForeColor = System.Drawing.Color.White;
+            this.mtrlmng_btn.Location = new System.Drawing.Point(-3, -6);
+            this.mtrlmng_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.mtrlmng_btn.Name = "mtrlmng_btn";
+            this.mtrlmng_btn.Size = new System.Drawing.Size(255, 55);
+            this.mtrlmng_btn.TabIndex = 4;
+            this.mtrlmng_btn.Text = "          Material Management";
+            this.mtrlmng_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.mtrlmng_btn.UseVisualStyleBackColor = true;
+            this.mtrlmng_btn.Click += new System.EventHandler(this.mtrlmng_btn_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.ordrmng_btn);
+            this.panel3.Location = new System.Drawing.Point(3, 418);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(245, 46);
+            this.panel3.TabIndex = 8;
+            // 
+            // ordrmng_btn
+            // 
+            this.ordrmng_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ordrmng_btn.ForeColor = System.Drawing.Color.White;
+            this.ordrmng_btn.Location = new System.Drawing.Point(-3, -6);
+            this.ordrmng_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ordrmng_btn.Name = "ordrmng_btn";
+            this.ordrmng_btn.Size = new System.Drawing.Size(255, 55);
+            this.ordrmng_btn.TabIndex = 4;
+            this.ordrmng_btn.Text = "          Order Management";
+            this.ordrmng_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ordrmng_btn.UseVisualStyleBackColor = true;
+            this.ordrmng_btn.Click += new System.EventHandler(this.ordrmng_btn_Click);
+            // 
             // sidebar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -234,6 +288,8 @@
             this.panel12.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -254,5 +310,9 @@
         private System.Windows.Forms.Button reports_btn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button suppmng_btn;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button mtrlmng_btn;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button ordrmng_btn;
     }
 }

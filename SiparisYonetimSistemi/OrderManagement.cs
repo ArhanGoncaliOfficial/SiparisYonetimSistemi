@@ -296,5 +296,10 @@ namespace SiparisYonetimSistemi
                               MessageBoxIcon.Error);
             }
         }
+
+        private void OrderManagement_Load_1(object sender, EventArgs e)
+        {
+            sidebar1.ParentFormRef = this;
+        }
     }
 }

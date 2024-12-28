@@ -18,6 +18,7 @@ namespace SiparisYonetimSistemi
         private void Reports_Load(object sender, EventArgs e)
         {
             LoadCharts();
+            sidebar1.ParentFormRef = this;
         }
 
         private void LoadCharts()

@@ -18,6 +18,7 @@ namespace SiparisYonetimSistemi
         {
             LoadComboBoxItems();
             LoadData();
+            sidebar1.ParentFormRef = this;
         }
 
         private void LoadComboBoxItems()

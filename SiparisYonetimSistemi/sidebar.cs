@@ -90,5 +90,29 @@ namespace SiparisYonetimSistemi
                 ParentFormRef.Hide();
             }
         }
+
+        private void mtrlmng_btn_Click(object sender, EventArgs e)
+        {
+            MaterialManagament materialManagamentForm = new MaterialManagament();
+            materialManagamentForm.StartPosition = FormStartPosition.CenterScreen;
+            materialManagamentForm.Show();
+
+            if (ParentFormRef != null)
+            {
+                ParentFormRef.Hide();
+            }
+        }
+
+        private void ordrmng_btn_Click(object sender, EventArgs e)
+        {
+            OrderManagement orderManagementForm = new OrderManagement();
+            orderManagementForm.StartPosition = FormStartPosition.CenterScreen;
+            orderManagementForm.Show();
+
+            if (ParentFormRef != null)
+            {
+                ParentFormRef.Hide();
+            }
+        }
     }
 }
