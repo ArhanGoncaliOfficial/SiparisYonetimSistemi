@@ -104,7 +104,7 @@ namespace SiparisYonetimSistemi
                 int orderId = Convert.ToInt32(row.Cells["OrderID"].Value);
 
                 // Eğer sipariş zaten teslim edilmişse, işlem yapma
-                if (currentStatus.Equals("Teslim", StringComparison.OrdinalIgnoreCase))
+                if (currentStatus.Equals("Teslim", StringComparison.OrdinalIgnoreCase) || currentStatus.Equals("Odendi", StringComparison.OrdinalIgnoreCase))
                 {
                     MessageBox.Show("Bu sipariş zaten teslim edilmiş.",
                                   "Bilgi",
@@ -209,7 +209,7 @@ namespace SiparisYonetimSistemi
                         // Teslim edilmiş siparişlerin butonlarını devre dışı bırak
                         foreach (DataGridViewRow row in dataGridView_OrderManagement.Rows)
                         {
-                            if (row.Cells["Status"].Value.ToString().Equals("Teslim", StringComparison.OrdinalIgnoreCase))
+                            if (row.Cells["Status"].Value.ToString().Equals("Teslim", StringComparison.OrdinalIgnoreCase) || row.Cells["Status"].Value.ToString().Equals("Odendi", StringComparison.OrdinalIgnoreCase))
                             {
                                 DataGridViewButtonCell buttonCell = (DataGridViewButtonCell)row.Cells["DeliveryButton"];
                                 buttonCell.Style.BackColor = System.Drawing.Color.LightGray;

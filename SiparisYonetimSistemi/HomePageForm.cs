@@ -311,14 +311,15 @@ namespace AnaDash
                     {
                         try
                         {
-                            // Siparişleri arşivle veya sil
-                            var deleteQuery = @"
-                            DELETE FROM orders 
-                            WHERE TableID = @TableId 
-                            AND DATE(OrderDate) = CURDATE() 
-                            AND Status = 'Teslim'";
+                            // Siparişlerin durumunu 'Odendi' olarak güncelle
+                            var updateQuery = @"
+                        UPDATE orders 
+                        SET Status = 'Odendi' 
+                        WHERE TableID = @TableId 
+                        AND DATE(OrderDate) = CURDATE() 
+                        AND Status = 'Teslim'";
 
-                            using (var cmd = new MySqlCommand(deleteQuery, connection, transaction))
+                            using (var cmd = new MySqlCommand(updateQuery, connection, transaction))
                             {
                                 cmd.Parameters.AddWithValue("@TableId", tableId);
                                 cmd.ExecuteNonQuery();

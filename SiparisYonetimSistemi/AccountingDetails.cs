@@ -101,7 +101,7 @@ namespace SiparisYonetimSistemi
                         FROM Orders o
                         JOIN OrderDetails od ON o.OrderID = od.OrderID
                         JOIN MenuItems mi ON od.MenuItemID = mi.MenuItemID
-                        WHERE o.Status = 'Teslim'
+                        WHERE o.Status = 'Odendi'
                         
                         UNION ALL
                         
