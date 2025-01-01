@@ -37,25 +37,28 @@
             this.user_m_btn = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
             this.menu_m_btn = new System.Windows.Forms.Button();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.acc_btn = new System.Windows.Forms.Button();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.reports_btn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.suppmng_btn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.mtrlmng_btn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.ordrmng_btn = new System.Windows.Forms.Button();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.acc_btn = new System.Windows.Forms.Button();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.reports_btn = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.about_btn = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel13.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -70,6 +73,7 @@
             this.flowLayoutPanel1.Controls.Add(this.panel3);
             this.flowLayoutPanel1.Controls.Add(this.panel12);
             this.flowLayoutPanel1.Controls.Add(this.panel13);
+            this.flowLayoutPanel1.Controls.Add(this.panel4);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -158,52 +162,6 @@
             this.menu_m_btn.UseVisualStyleBackColor = true;
             this.menu_m_btn.Click += new System.EventHandler(this.menu_m_btn_Click);
             // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.acc_btn);
-            this.panel12.Location = new System.Drawing.Point(3, 468);
-            this.panel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(245, 46);
-            this.panel12.TabIndex = 5;
-            // 
-            // acc_btn
-            // 
-            this.acc_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.acc_btn.ForeColor = System.Drawing.Color.White;
-            this.acc_btn.Location = new System.Drawing.Point(-3, -6);
-            this.acc_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.acc_btn.Name = "acc_btn";
-            this.acc_btn.Size = new System.Drawing.Size(255, 55);
-            this.acc_btn.TabIndex = 4;
-            this.acc_btn.Text = "          Accountancy";
-            this.acc_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.acc_btn.UseVisualStyleBackColor = true;
-            this.acc_btn.Click += new System.EventHandler(this.acc_btn_Click);
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.reports_btn);
-            this.panel13.Location = new System.Drawing.Point(3, 518);
-            this.panel13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(245, 46);
-            this.panel13.TabIndex = 6;
-            // 
-            // reports_btn
-            // 
-            this.reports_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reports_btn.ForeColor = System.Drawing.Color.White;
-            this.reports_btn.Location = new System.Drawing.Point(-3, -6);
-            this.reports_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.reports_btn.Name = "reports_btn";
-            this.reports_btn.Size = new System.Drawing.Size(255, 55);
-            this.reports_btn.TabIndex = 4;
-            this.reports_btn.Text = "          Reports";
-            this.reports_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.reports_btn.UseVisualStyleBackColor = true;
-            this.reports_btn.Click += new System.EventHandler(this.reports_btn_Click);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.suppmng_btn);
@@ -273,6 +231,75 @@
             this.ordrmng_btn.UseVisualStyleBackColor = true;
             this.ordrmng_btn.Click += new System.EventHandler(this.ordrmng_btn_Click);
             // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.acc_btn);
+            this.panel12.Location = new System.Drawing.Point(3, 468);
+            this.panel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(245, 46);
+            this.panel12.TabIndex = 5;
+            // 
+            // acc_btn
+            // 
+            this.acc_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.acc_btn.ForeColor = System.Drawing.Color.White;
+            this.acc_btn.Location = new System.Drawing.Point(-3, -6);
+            this.acc_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.acc_btn.Name = "acc_btn";
+            this.acc_btn.Size = new System.Drawing.Size(255, 55);
+            this.acc_btn.TabIndex = 4;
+            this.acc_btn.Text = "          Accountancy";
+            this.acc_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.acc_btn.UseVisualStyleBackColor = true;
+            this.acc_btn.Click += new System.EventHandler(this.acc_btn_Click);
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.reports_btn);
+            this.panel13.Location = new System.Drawing.Point(3, 518);
+            this.panel13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(245, 46);
+            this.panel13.TabIndex = 6;
+            // 
+            // reports_btn
+            // 
+            this.reports_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reports_btn.ForeColor = System.Drawing.Color.White;
+            this.reports_btn.Location = new System.Drawing.Point(-3, -6);
+            this.reports_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.reports_btn.Name = "reports_btn";
+            this.reports_btn.Size = new System.Drawing.Size(255, 55);
+            this.reports_btn.TabIndex = 4;
+            this.reports_btn.Text = "          Reports";
+            this.reports_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.reports_btn.UseVisualStyleBackColor = true;
+            this.reports_btn.Click += new System.EventHandler(this.reports_btn_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.about_btn);
+            this.panel4.Location = new System.Drawing.Point(3, 568);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(245, 46);
+            this.panel4.TabIndex = 7;
+            // 
+            // about_btn
+            // 
+            this.about_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.about_btn.ForeColor = System.Drawing.Color.White;
+            this.about_btn.Location = new System.Drawing.Point(-3, -6);
+            this.about_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.about_btn.Name = "about_btn";
+            this.about_btn.Size = new System.Drawing.Size(255, 55);
+            this.about_btn.TabIndex = 4;
+            this.about_btn.Text = "          About Us";
+            this.about_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.about_btn.UseVisualStyleBackColor = true;
+            this.about_btn.Click += new System.EventHandler(this.about_btn_Click);
+            // 
             // sidebar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -285,11 +312,12 @@
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -314,5 +342,7 @@
         private System.Windows.Forms.Button mtrlmng_btn;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button ordrmng_btn;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button about_btn;
     }
 }

@@ -114,5 +114,12 @@ namespace SiparisYonetimSistemi
                 ParentFormRef.Hide();
             }
         }
+
+        private void about_btn_Click(object sender, EventArgs e)
+        {
+            AboutUs AboutUsForm = new AboutUs();
+            AboutUsForm.StartPosition = FormStartPosition.CenterScreen;
+            AboutUsForm.Show();
+        }
     }
 }
